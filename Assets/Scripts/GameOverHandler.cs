@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using StartApp;
+
 
 public class GameOverHandler : MonoBehaviour
 {   [SerializeField] GameObject gameOverDisplay;
@@ -12,42 +12,44 @@ public class GameOverHandler : MonoBehaviour
     [SerializeField] ScoreSystem scoreSystem;
     [SerializeField] PlayerHealth playerHealth;
     [SerializeField] GameObject pauseMenu;
+    
 
 
     public void EndGame()
-    {   gameOverDisplay.gameObject.SetActive(true);
+
+    {    TimeController(0);
+        gameOverDisplay.gameObject.SetActive(true);
         asteroidSpwaner.enabled= false;
-        gameOverText.text = "Game Over /n Your Score : " + scoreSystem.EndTimer();
+        gameOverText.text = "Game Over \n Your Score : " + scoreSystem.EndTimer();
     }
    public void PlayGame()
    {
+       TimeController(1);
        SceneManager.LoadScene(1);
    }
    public void ReturnMainMenu()
-   {
+   {   TimeController(1);
        SceneManager.LoadScene(0);
-   }
-   public void WatchAdsToContinue(){
-       var ad = AdSdk.Instance.CreateInterstitial();
-       ad.RaiseAdLoaded += (sender, e) => ad.ShowAd();
-        ad.RaiseAdVideoCompleted += (sender, e) => { ResumeGame(); };
-        ad.LoadAd(InterstitialAd.AdType.Rewarded);
-
    }
    void ResumeGame(){
         gameOverDisplay.gameObject.SetActive(false);
         asteroidSpwaner.enabled= true;
         scoreSystem.ResumeTimer();
         playerHealth.Alive();
+        TimeController(1);
 
    }
    public void PauseMenuDisplay()
-   {   Time.timeScale =0;
+   {   TimeController(0);
        pauseMenu.SetActive(true);
    }
    public void PauseMenuContiune()
    {
-       Time.timeScale =1;
+       TimeController(1);
        pauseMenu.SetActive(false);
+   }
+   private void TimeController(int i)
+   {
+        Time.timeScale =i;
    }
 }

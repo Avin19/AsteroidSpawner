@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,8 +6,9 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     [SerializeField] private float forceMagnitude;
     [SerializeField] private float maxVelocity;
-     [SerializeField] private float rotationSpeed;
-    private Vector3 movementDirection;
+    [SerializeField] private float rotationSpeed;
+    
+    private Vector2 movementDirection;
     
     void Start()
     {
@@ -23,7 +21,6 @@ public class PlayerController : MonoBehaviour
     {   ProcessInput();
         KeepThePlayerOnScreen();
         RotateToFaceVelocity();
-        
     }
 
     private void RotateToFaceVelocity()
@@ -35,7 +32,7 @@ public class PlayerController : MonoBehaviour
     private void KeepThePlayerOnScreen()
     {   Vector3 newPosition = transform.position;
 
-        Vector3 viewportPosition=   mainCamera.WorldToViewportPoint(transform.position);
+        Vector3 viewportPosition=mainCamera.WorldToViewportPoint(transform.position);
         
         if(viewportPosition.x>1)
         {  
@@ -56,23 +53,21 @@ public class PlayerController : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        if (movementDirection == Vector3.zero){return;}
+        if (movementDirection == Vector2.zero){return;}
 
         rb.AddForce(movementDirection*forceMagnitude*Time.deltaTime,ForceMode.Force);
-        rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxVelocity);
+        rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxVelocity);
     }
     private void ProcessInput(){
             if(Touchscreen.current.primaryTouch.press.isPressed){
             Vector2 mousePosition = Vector2.zero;
            mousePosition= Touchscreen.current.primaryTouch.position.ReadValue();
-        
-           Vector3 worldPosition =mainCamera.ScreenToWorldPoint(mousePosition);
-           movementDirection = worldPosition- transform.position;
-           movementDirection.z=0;
+           Vector2 worldPosition =mainCamera.ScreenToWorldPoint(mousePosition);
+           movementDirection = worldPosition- new Vector2(transform.position.x, transform.position.y);
            movementDirection.Normalize();
         }
         else{
-            movementDirection = Vector3.zero;
+            movementDirection = Vector2.zero;
         }
     }
 }

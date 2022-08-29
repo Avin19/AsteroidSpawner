@@ -1,25 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class ScoreSystem : MonoBehaviour
 {
     [SerializeField] private TMP_Text scoreText;
-    [SerializeField] private float scoreMultiplier;
+
     private bool stopScore= true;
-    private float score;
+    private int score;
+    private void Start() {
+        score= PlayerPrefs.GetInt("Coin",0);
+    }
     void Update()
-    
     {
         if(!stopScore){return;}
-        score += Time.deltaTime * scoreMultiplier;
 
-        scoreText.text = Mathf.FloorToInt(score).ToString();
+        scoreText.text =score.ToString();
+
         
+    }
+    public void coinadd(){
+        score += 1;
+        PlayerPrefs.SetInt("Coin",score);
     }
     public int EndTimer(){
         stopScore =false;
+        
         scoreText.text = string.Empty;
         return Mathf.FloorToInt(score);
     }

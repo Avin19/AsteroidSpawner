@@ -6,10 +6,10 @@ using UnityEngine;
 public class AsteroidSpwaner : MonoBehaviour
 {
     [SerializeField] private GameObject[] asteroidPrefabs;
-    [SerializeField] private GameObject[] weaponPrefabs;
-    [SerializeField] private GameObject[] boostPerfabs;
+   
     [SerializeField] private float secondBetweenAsteroids = 1f;
     [SerializeField]private Vector2 forceRange;
+    [SerializeField]private Transform ship;
 
     private float timer;
     private Camera mainCamera;
@@ -19,6 +19,7 @@ public class AsteroidSpwaner : MonoBehaviour
 
     private void Update() {
         SpawnAsteroid();
+       
     }
 
     private void SpawnAsteroid()
@@ -30,7 +31,7 @@ public class AsteroidSpwaner : MonoBehaviour
             int side =Random.Range(0,4);   
 
             Vector2 spwanPoint = Vector2.zero;
-            Vector2 direction =  Vector2.zero;
+            Vector2 direction = Vector2.zero;
 
             switch(side)
              {
@@ -44,40 +45,36 @@ public class AsteroidSpwaner : MonoBehaviour
                     //right
                     spwanPoint.x=1f;
                         spwanPoint.y=Random.value;
-                        direction = new Vector2(-1f , Random.Range(-1f,1f));
+                       direction = new Vector2(-1f , Random.Range(-1f,1f));
                         
                         break;
                     case 2:
                     //bottom
                         spwanPoint.x= Random.value;
                         spwanPoint.y =0f;
-                        direction =new Vector2(Random.Range(-1f,1f),1f);
+                       direction =new Vector2(Random.Range(-1f,1f),1f);
 
                         break;
                     case 3:
                     //top
                         spwanPoint.x =Random.value;
                         spwanPoint.y =1f;
-                        direction = new Vector2(Random.Range(-1f,1f), -1f);
+                       direction = new Vector2(Random.Range(-1f,1f), -1f);
                         break;
 
                     }
             Vector3 worldSpawn =mainCamera.ViewportToWorldPoint(spwanPoint);
+            
             worldSpawn.z =0;
             GameObject asteroidInstance=Instantiate(
-            asteroidPrefabs[UnityEngine.Random.Range(0,asteroidPrefabs.Length)], 
+            asteroidPrefabs[Random.Range(0,asteroidPrefabs.Length)], 
             worldSpawn , 
-            Quaternion.Euler(0f,0f,UnityEngine.Random.Range(0f,360f)) );
+            Quaternion.Euler(0f,0f,Random.Range(0f,360f)) );
             Rigidbody rb = asteroidInstance.GetComponent<Rigidbody>();
-            rb.velocity = direction.normalized*UnityEngine.Random.Range(forceRange.x,forceRange.y);
-
+            rb.velocity = direction.normalized*Random.Range(forceRange.x,forceRange.y);
     
             timer += secondBetweenAsteroids;
         }
-
-    }
-    private void WeaponSpwaner()
-    {
 
     }
 }
