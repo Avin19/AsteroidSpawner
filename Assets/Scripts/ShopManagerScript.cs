@@ -5,7 +5,7 @@ using TMPro;
 
 public class ShopManagerScript : MonoBehaviour
 {
-    public int currentShipIndex ;
+    public int currentShipIndex  ;
     public GameObject[] shipModels;
     public shipblueprint[] ships;
     public TMP_Text startText ,coinText, yourCoin;
@@ -20,23 +20,28 @@ public class ShopManagerScript : MonoBehaviour
             {
                 ship.isUnlocked =true;
             }
+            else if(PlayerPrefs.GetInt(ship.name,0)==1)
+            {
+                ship.isUnlocked =true;
+            }
             else
             {
                 ship.isUnlocked =false;
             }
         }
-       
+       //unlocked the first ship 
         currentShipIndex = PlayerPrefs.GetInt("SelectedShip",0);
         foreach (GameObject ship in shipModels)
         {
             ship.SetActive(false);
         }
+        //all ship model set to false visible
         shipModels[currentShipIndex].SetActive(true);
+        //currentShipIndex is set true
        
         
     }
     private void Update() {
-   
      UIUpdate();
     }
    public void ChangeNext()
@@ -77,11 +82,20 @@ public class ShopManagerScript : MonoBehaviour
         if(startText.text =="Start"){
             PlayerPrefs.SetInt("SelectedShip",currentShipIndex);
             SceneManager.LoadScene("Level");
-           
         }
         else{
             int coin = PlayerPrefs.GetInt("Coin",0);
-        //buy new ship code
+            if(coin>=ships[currentShipIndex].price)
+            {   // reducing the coin amount     
+                coin =coin-ships[currentShipIndex].price;
+                // saving the coin update amount
+                PlayerPrefs.SetInt("Coin",coin);
+                // storing the unlocked ships
+                PlayerPrefs.SetInt(ships[currentShipIndex].name,1);
+                //unlocked ships 
+                ships[currentShipIndex].isUnlocked = true;
+                ships[currentShipIndex].price =0;
+            }
         }
    }
   public void UIUpdate()
@@ -94,6 +108,7 @@ public class ShopManagerScript : MonoBehaviour
     else
     { 
         startText.text ="Buy"; 
+        
     }
     coinText.text =  s.price.ToString();
     

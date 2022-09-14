@@ -19,6 +19,7 @@ public class AsteroidSpwaner : MonoBehaviour
 
     private void Update() {
         SpawnAsteroid();
+        secondBetweenAsteroids =Random.Range(0.2f,0.3f);
        
     }
 
@@ -37,29 +38,29 @@ public class AsteroidSpwaner : MonoBehaviour
              {
                  case 0:
                     //left
-                        spwanPoint.x=0f;
+                        spwanPoint.x=-7f;
                         spwanPoint.y = Random.value;
-                        direction = new Vector2 (1f, Random.Range(-1f,1f));
+                        direction = new Vector2 (1f, Random.Range(-0.5f,.5f));
                         break;
                     case 1:
                     //right
-                    spwanPoint.x=1f;
+                    spwanPoint.x=5f;
                         spwanPoint.y=Random.value;
-                       direction = new Vector2(-1f , Random.Range(-1f,1f));
+                       direction = new Vector2(-1f , Random.Range(-10f,10f));
                         
                         break;
                     case 2:
                     //bottom
                         spwanPoint.x= Random.value;
                         spwanPoint.y =0f;
-                       direction =new Vector2(Random.Range(-1f,1f),1f);
+                       direction =new Vector2(Random.Range(-2f,2f),2f);
 
                         break;
                     case 3:
                     //top
                         spwanPoint.x =Random.value;
                         spwanPoint.y =1f;
-                       direction = new Vector2(Random.Range(-1f,1f), -1f);
+                       direction = new Vector2(Random.Range(-2f,2f), -2f);
                         break;
 
                     }

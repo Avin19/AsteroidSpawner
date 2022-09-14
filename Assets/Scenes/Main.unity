@@ -2815,35 +2815,35 @@ MonoBehaviour:
     isUnlocked: 0
   - name: s2
     index: 1
-    price: 300
+    price: 30
     isUnlocked: 0
   - name: s3
     index: 2
-    price: 500
+    price: 50
     isUnlocked: 0
   - name: s4
     index: 3
-    price: 700
+    price: 70
     isUnlocked: 0
   - name: s5
     index: 4
-    price: 900
+    price: 90
     isUnlocked: 0
   - name: s6
     index: 5
-    price: 1100
+    price: 110
     isUnlocked: 0
   - name: s7
     index: 6
-    price: 1300
+    price: 130
     isUnlocked: 0
   - name: s8
     index: 7
-    price: 1500
+    price: 150
     isUnlocked: 0
   - name: s9
     index: 8
-    price: 1700
+    price: 170
     isUnlocked: 0
   startText: {fileID: 1120907695}
   coinText: {fileID: 405872931}
