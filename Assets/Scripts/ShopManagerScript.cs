@@ -10,10 +10,27 @@ public class ShopManagerScript : MonoBehaviour
     public shipblueprint[] ships;
     public TMP_Text startText ,coinText, yourCoin;
     
-
-    void Start()
+void Awake()
+  {
+    for (int i =1 ; i<= 9 ; i++)
+        {
+            Debug.Log(i);
+            shipModels[i]= GameObject.Find("ShipHolder/StarSparrow"+(i+1).ToString());
+            
+        }
+        currentShipIndex = PlayerPrefs.GetInt("SelectedShip",0);
+        foreach (GameObject ship in shipModels)
+        {
+            ship.SetActive(false);
+        }
+        //all ship model set to false visible
+        shipModels[currentShipIndex].SetActive(true);
+        
+  }
+void Start()
     {  
         yourCoin.text= "Your Coin : "+ PlayerPrefs.GetInt("Coin",0).ToString();
+        
         foreach(shipblueprint ship in ships)
         {
             if( ship.price == 0 )
@@ -29,15 +46,7 @@ public class ShopManagerScript : MonoBehaviour
                 ship.isUnlocked =false;
             }
         }
-       //unlocked the first ship 
-        currentShipIndex = PlayerPrefs.GetInt("SelectedShip",0);
-        foreach (GameObject ship in shipModels)
-        {
-            ship.SetActive(false);
-        }
-        //all ship model set to false visible
-        shipModels[currentShipIndex].SetActive(true);
-        //currentShipIndex is set true
+       
        
         
     }

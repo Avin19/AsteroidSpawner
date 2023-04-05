@@ -10,5 +10,6 @@ public class LOGO : MonoBehaviour
     void Update()
     {
        transform.Rotate(0f,rotateSpeed* Time.deltaTime,0f,Space.Self);
+       
     }
 }

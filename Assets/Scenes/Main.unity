@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -152,57 +152,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19a176932186faf4ab264f910de63261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentShipIndex: 1
-  shipModels:
-  - {fileID: 627804339}
-  - {fileID: 507601316}
-  - {fileID: 1809661689}
-  - {fileID: 1727050018}
-  - {fileID: 1573702580}
-  - {fileID: 2079445789}
-  - {fileID: 1102676790}
-  - {fileID: 309669449}
-  - {fileID: 1815696475}
-  ships:
-  - name: s1
-    index: 0
-    price: 0
-    isUnlocked: 0
-  - name: s2
-    index: 1
-    price: 200
-    isUnlocked: 0
-  - name: s3
-    index: 2
-    price: 400
-    isUnlocked: 0
-  - name: s4
-    index: 3
-    price: 600
-    isUnlocked: 0
-  - name: s5
-    index: 4
-    price: 800
-    isUnlocked: 0
-  - name: s6
-    index: 5
-    price: 1000
-    isUnlocked: 0
-  - name: s7
-    index: 6
-    price: 1200
-    isUnlocked: 0
-  - name: s8
-    index: 7
-    price: 1400
-    isUnlocked: 0
-  - name: s9
-    index: 8
-    price: 1600
-    isUnlocked: 0
+  currentShipIndex: 0
+  shipModels: []
+  ships: []
   startText: {fileID: 1120907695}
   coinText: {fileID: 405872931}
-  yourCoin: {fileID: 446902481}
+  yourCoin: {fileID: 405872931}
 --- !u!4 &37302936
 Transform:
   m_ObjectHideFlags: 0
@@ -634,11 +589,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272642625}
   m_CullTransparentMesh: 1
---- !u!1 &309669449 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 15e01a88075383240a48bc4527c69658, type: 3}
-  m_PrefabInstance: {fileID: 335148279}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &335148279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1023,11 +973,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 446902479}
   m_CullTransparentMesh: 1
---- !u!1 &507601316 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 935092da8210ce844895c8a67045f830, type: 3}
-  m_PrefabInstance: {fileID: 2027518635}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &513407201 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2bb96f3cbf864a44e8fa496fcc34f434, type: 3}
@@ -1132,6 +1077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}
@@ -1148,6 +1094,7 @@ MonoBehaviour:
   m_TrackedDeviceOrientationAction: {fileID: 1025543830046995696, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
 --- !u!1001 &552522634
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1340,11 +1287,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 816eca2bca813da4883bad3b376c4dbc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90d452847afc80f468b1480ccb2f3c45, type: 3}
---- !u!1 &627804339 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9eafec2478441af418574f3e9e971f8d, type: 3}
-  m_PrefabInstance: {fileID: 788370617}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &637347807
 GameObject:
   m_ObjectHideFlags: 0
@@ -1563,6 +1505,37 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 816eca2bca813da4883bad3b376c4dbc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7070c3de80ef51145884ff24558ecd63, type: 3}
+--- !u!1 &710954119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 710954121}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &710954121
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710954119}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.14219083, y: -0.25235543, z: 0.9898381}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &722309663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2149,11 +2122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7595463a24c54ff4286c1a9783d574e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1102676790 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 741053bc327354845884391aa7b7bc7e, type: 3}
-  m_PrefabInstance: {fileID: 1200731421}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1117949813
 GameObject:
   m_ObjectHideFlags: 0
@@ -2799,51 +2767,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentShipIndex: 0
   shipModels:
-  - {fileID: 627804339}
-  - {fileID: 507601316}
-  - {fileID: 1809661689}
-  - {fileID: 1727050018}
-  - {fileID: 1573702580}
-  - {fileID: 2079445789}
-  - {fileID: 1102676790}
-  - {fileID: 309669449}
-  - {fileID: 1815696475}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   ships:
-  - name: s1
+  - name: SP1
     index: 0
     price: 0
     isUnlocked: 0
-  - name: s2
-    index: 1
+  - name: SP2
+    index: 0
     price: 30
     isUnlocked: 0
-  - name: s3
-    index: 2
-    price: 50
+  - name: SP3
+    index: 0
+    price: 60
     isUnlocked: 0
-  - name: s4
-    index: 3
-    price: 70
+  - name: SP4
+    index: 0
+    price: 120
     isUnlocked: 0
-  - name: s5
-    index: 4
-    price: 90
+  - name: SP5
+    index: 0
+    price: 180
     isUnlocked: 0
-  - name: s6
-    index: 5
-    price: 110
+  - name: SP6
+    index: 0
+    price: 210
     isUnlocked: 0
-  - name: s7
-    index: 6
-    price: 130
+  - name: SP7
+    index: 0
+    price: 240
     isUnlocked: 0
-  - name: s8
-    index: 7
-    price: 150
+  - name: SP8
+    index: 0
+    price: 270
     isUnlocked: 0
-  - name: s9
-    index: 8
-    price: 170
+  - name: SP9
+    index: 0
+    price: 300
     isUnlocked: 0
   startText: {fileID: 1120907695}
   coinText: {fileID: 405872931}
@@ -3041,11 +3009,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1573702580 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0367de8b5e7f1a241a7571d0b6732855, type: 3}
-  m_PrefabInstance: {fileID: 552522634}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1620682685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3107,21 +3070,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e1cac9f87fda27445ac6a54ade344d63, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3306fa24ad1e7b4295febcc1f26759e, type: 3}
---- !u!1 &1727050018 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7434f156f1a25df4596be6564fe60b9d, type: 3}
-  m_PrefabInstance: {fileID: 2095891756}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1809661689 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b3f31988fa57e6448857f14a9607ca49, type: 3}
-  m_PrefabInstance: {fileID: 916434673}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1815696475 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c5854ef2d6dd2ab4ba6f56c2053676c0, type: 3}
-  m_PrefabInstance: {fileID: 1452924468}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1859377939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3560,11 +3508,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7595463a24c54ff4286c1a9783d574e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &2079445789 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d84ec9911cfe0f142b57114817caaf7d, type: 3}
-  m_PrefabInstance: {fileID: 949928659}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2095315776
 GameObject:
   m_ObjectHideFlags: 0

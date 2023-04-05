@@ -36,17 +36,17 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\IronSource\Editor\IronSourceEditorCoroutines.cs" />
-     <Compile Include="Assets\IronSource\Editor\IronSourcePlistProcessor.cs" />
      <Compile Include="Assets\IronSource\Editor\IAdapterSettings.cs" />
+     <Compile Include="Assets\IronSource\Editor\IronSourceBuildPostprocessor.cs" />
+     <Compile Include="Assets\IronSource\Editor\IronSourceMenu.cs" />
+     <Compile Include="Assets\IronSource\Editor\IronSourceManifestProcessor.cs" />
+     <Compile Include="Assets\IronSource\Editor\IronSourceEditorCoroutines.cs" />
+     <Compile Include="Assets\IronSource\Editor\IronSourceDependenciesManager.cs" />
+     <Compile Include="Assets\IronSource\Editor\IronSourceMediationSettingsInspector.cs" />
+     <Compile Include="Assets\IronSource\Editor\IronSourcePlistProcessor.cs" />
      <Compile Include="Assets\IronSource\Editor\IronSourceMediatedNetworkSettingsInspector.cs" />
      <Compile Include="Assets\IronSource\Editor\IronSourceMediatedNetworkSettings.cs" />
-     <Compile Include="Assets\IronSource\Editor\IronSourceBuildPostprocessor.cs" />
-     <Compile Include="Assets\IronSource\Editor\IronSourceDependenciesManager.cs" />
-     <Compile Include="Assets\IronSource\Editor\IronSourceManifestProcessor.cs" />
-     <Compile Include="Assets\IronSource\Editor\IronSourceMenu.cs" />
      <Compile Include="Assets\IronSource\Editor\IronSourceDependenciesManagerConstants.cs" />
-     <Compile Include="Assets\IronSource\Editor\IronSourceMediationSettingsInspector.cs" />
      <None Include="Assets\ExternalDependencyManager\Editor\external-dependency-manager_version-1.2.169_manifest.txt" />
      <None Include="Assets\IronSource\Editor\IronSourceSDKDependencies.xml" />
     <Reference Include="UnityEngine">
@@ -304,8 +304,26 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.3f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="Google.VersionHandlerImpl">
+        <HintPath>G:\Game\Space Asteroid\Assets\ExternalDependencyManager\Editor\1.2.169\Google.VersionHandlerImpl.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil.Pdb">
+        <HintPath>G:\Game\Space Asteroid\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="log4netPlastic">
+        <HintPath>G:\Game\Space Asteroid\Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+        <HintPath>G:\Game\Space Asteroid\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.PackageManagerResolver">
+        <HintPath>G:\Game\Space Asteroid\Assets\ExternalDependencyManager\Editor\1.2.169\Google.PackageManagerResolver.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
         <HintPath>G:\Game\Space Asteroid\Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.JarResolver">
+        <HintPath>G:\Game\Space Asteroid\Assets\ExternalDependencyManager\Editor\1.2.169\Google.JarResolver.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
         <HintPath>G:\Game\Space Asteroid\Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
@@ -316,35 +334,17 @@
     <Reference Include="Unity.Burst.Cecil.Mdb">
         <HintPath>G:\Game\Space Asteroid\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Burst.Cecil.Pdb">
-        <HintPath>G:\Game\Space Asteroid\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+    <Reference Include="Google.VersionHandler">
+        <HintPath>G:\Game\Space Asteroid\Assets\ExternalDependencyManager\Editor\Google.VersionHandler.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil">
         <HintPath>G:\Game\Space Asteroid\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
     </Reference>
-    <Reference Include="log4netPlastic">
-        <HintPath>G:\Game\Space Asteroid\Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Burst.Cecil.Rocks">
         <HintPath>G:\Game\Space Asteroid\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-        <HintPath>G:\Game\Space Asteroid\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="unityplastic">
         <HintPath>G:\Game\Space Asteroid\Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.JarResolver">
-        <HintPath>G:\Game\Space Asteroid\Assets\ExternalDependencyManager\Editor\1.2.169\Google.JarResolver.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.VersionHandlerImpl">
-        <HintPath>G:\Game\Space Asteroid\Assets\ExternalDependencyManager\Editor\1.2.169\Google.VersionHandlerImpl.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.VersionHandler">
-        <HintPath>G:\Game\Space Asteroid\Assets\ExternalDependencyManager\Editor\Google.VersionHandler.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.PackageManagerResolver">
-        <HintPath>G:\Game\Space Asteroid\Assets\ExternalDependencyManager\Editor\1.2.169\Google.PackageManagerResolver.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
         <HintPath>G:\Game\Space Asteroid\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>

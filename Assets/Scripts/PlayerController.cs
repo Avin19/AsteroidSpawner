@@ -60,11 +60,11 @@ public class PlayerController : MonoBehaviour
     }
     private void ProcessInput(){
             if(Touchscreen.current.primaryTouch.press.isPressed){
-            Vector2 mousePosition = Vector2.zero;
-           mousePosition= Touchscreen.current.primaryTouch.position.ReadValue();
-           Vector2 worldPosition =mainCamera.ScreenToWorldPoint(mousePosition);
-           movementDirection = worldPosition- new Vector2(transform.position.x, transform.position.y);
-           movementDirection.Normalize();
+                     Vector2 mousePosition = Vector2.zero;
+                     mousePosition= Touchscreen.current.primaryTouch.position.ReadValue();
+                    Vector2 worldPosition =mainCamera.ScreenToWorldPoint(mousePosition);
+                        movementDirection = worldPosition- new Vector2(transform.position.x, transform.position.y);
+                     movementDirection.Normalize();
         }
         else{
             movementDirection = Vector2.zero;
