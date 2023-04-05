@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class AsteroidSpwaner : MonoBehaviour
 {
+    //Store the perfabs of the all the asteriods that can be used in the game 
     [SerializeField] private GameObject[] asteroidPrefabs;
-   
-    [SerializeField] private float secondBetweenAsteroids = 1f;
+    //Intervial between two asteriods generation
+    [SerializeField] private float secondBetweenAsteroids;
     [SerializeField]private Vector2 forceRange;
     [SerializeField]private Transform ship;
 
@@ -22,7 +23,7 @@ public class AsteroidSpwaner : MonoBehaviour
         secondBetweenAsteroids =Random.Range(0.2f,0.3f);
        
     }
-
+    //Randomly spawn asteriods in the scenes
     private void SpawnAsteroid()
     {
         timer -= Time.deltaTime;
