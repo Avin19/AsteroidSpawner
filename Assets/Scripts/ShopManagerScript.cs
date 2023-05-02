@@ -5,47 +5,50 @@ using TMPro;
 
 public class ShopManagerScript : MonoBehaviour
 {
-    public int currentShipIndex  ;
+    public int playerShipIndex  ; // Setting the first ship available
+    public int currentShipIndex;
     public GameObject[] shipModels;
     public shipblueprint[] ships;
     public TMP_Text startText ,coinText, yourCoin;
     
 void Awake()
   {
-    for (int i =1 ; i<= 9 ; i++)
+    for (int i =0 ; i< 9 ; i++)
         {
-            Debug.Log(i);
+            //Debug.Log(i);
             shipModels[i]= GameObject.Find("ShipHolder/StarSparrow"+(i+1).ToString());
             
         }
-        currentShipIndex = PlayerPrefs.GetInt("SelectedShip",0);
+        //Checking which one the player has unclock , if player not unclock any then default first ship will be unclocked 
+        playerShipIndex = PlayerPrefs.GetInt("SelectedShip",0);
+        //all ship model set to false visible
         foreach (GameObject ship in shipModels)
         {
             ship.SetActive(false);
         }
-        //all ship model set to false visible
-        shipModels[currentShipIndex].SetActive(true);
+        //unclock the ship at currentshipindex
+        shipModels[playerShipIndex].SetActive(true);
         
   }
 void Start()
-    {  
+    {  //getting the player coin
         yourCoin.text= "Your Coin : "+ PlayerPrefs.GetInt("Coin",0).ToString();
-        
-        foreach(shipblueprint ship in ships)
-        {
-            if( ship.price == 0 )
-            {
-                ship.isUnlocked =true;
-            }
-            else if(PlayerPrefs.GetInt(ship.name,0)==1)
-            {
-                ship.isUnlocked =true;
-            }
-            else
-            {
-                ship.isUnlocked =false;
-            }
-        }
+        //
+        // foreach(shipblueprint ship in ships)
+        // {
+        //     if( ship.price == 0 )
+        //     {
+        //         ship.isUnlocked =true;
+        //     }
+        //     else if(PlayerPrefs.GetInt(ship.name,0)==1)
+        //     {
+        //         ship.isUnlocked =true;
+        //     }
+        //     else
+        //     {
+        //         ship.isUnlocked =false;
+        //     }
+        // }
        
        
         

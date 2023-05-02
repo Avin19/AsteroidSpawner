@@ -5,5 +5,8 @@ using UnityEngine;
 public class Shipinformation : ScriptableObject
 
 {
-  
+    string name;
+     int index;
+     int price;
+    bool isUnlocked; 
 }

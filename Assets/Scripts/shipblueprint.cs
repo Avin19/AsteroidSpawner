@@ -6,4 +6,5 @@ public class shipblueprint {
     public int index;
     public int price;
     public bool isUnlocked; 
+
 }
