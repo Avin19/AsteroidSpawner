@@ -13,10 +13,14 @@ public class ShopManagerScript : MonoBehaviour
     
 void Awake()
   {
-    for (int i =0 ; i< 9 ; i++)
+    for (int i =0 ; i < 9 ; i++)
         {
-            //Debug.Log(i);
+            //storing the ships models 
             shipModels[i]= GameObject.Find("ShipHolder/StarSparrow"+(i+1).ToString());
+            //Adding the ships to the 
+            ships[i].name = "StarSparrow"+(i+1).ToString();
+            ships[i].index = i;
+            ships[i].price =i*30;
             
         }
         //Checking which one the player has unclock , if player not unclock any then default first ship will be unclocked 
@@ -33,22 +37,22 @@ void Awake()
 void Start()
     {  //getting the player coin
         yourCoin.text= "Your Coin : "+ PlayerPrefs.GetInt("Coin",0).ToString();
-        //
-        // foreach(shipblueprint ship in ships)
-        // {
-        //     if( ship.price == 0 )
-        //     {
-        //         ship.isUnlocked =true;
-        //     }
-        //     else if(PlayerPrefs.GetInt(ship.name,0)==1)
-        //     {
-        //         ship.isUnlocked =true;
-        //     }
-        //     else
-        //     {
-        //         ship.isUnlocked =false;
-        //     }
-        // }
+        
+        foreach(shipblueprint ship in ships)
+        {
+            if( ship.price == 0 )
+            {
+                ship.isUnlocked =true;
+            }
+            else if(PlayerPrefs.GetInt(ship.name,0)==1)
+            {
+                ship.isUnlocked =true;
+            }
+            else
+            {
+                ship.isUnlocked =false;
+            }
+        }
        
        
         

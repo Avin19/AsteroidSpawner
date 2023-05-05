@@ -45,6 +45,7 @@ public class PlayerHealth : MonoBehaviour
             Crash();
         }
     }
+    
 // red flash low health 
     private void Flash()
     {

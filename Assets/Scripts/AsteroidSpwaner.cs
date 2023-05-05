@@ -11,18 +11,21 @@ public class AsteroidSpwaner : MonoBehaviour
     [SerializeField] private float secondBetweenAsteroids;
     [SerializeField]private Vector2 forceRange;
     [SerializeField]private Transform ship;
+  
 
     private float timer;
     private Camera mainCamera;
+    
     private void Start() {
         mainCamera =Camera.main;
     }
-
+    
     private void Update() {
         SpawnAsteroid();
         secondBetweenAsteroids =Random.Range(0.2f,0.3f);
        
     }
+    
     //Randomly spawn asteriods in the scenes
     private void SpawnAsteroid()
     {
