@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
  
     void Update()
     {
-        //Debug.Log(Player.transform.position);
+        Debug.Log(Player.transform.position);
         
         
     }

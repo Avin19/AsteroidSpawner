@@ -1,3 +1,21 @@
+Update on 06/May /2023
+storing the player purchase 
+making the ship unlocked every time new game runs
+
+Firing of the bullets that needs to Start
+
+
+Joystick control in place of touch based 
+
+booster for speed 
+
+
+working on trails 
+
+
+
+
+
 Audio Manager
 Add Emeny
 Ads ()

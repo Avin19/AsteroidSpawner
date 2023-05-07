@@ -9,6 +9,8 @@ public class ShopManagerScript : MonoBehaviour
     public int currentShipIndex;
     public GameObject[] shipModels;
     public shipblueprint[] ships;
+
+    private int[] shipUnlocked;
     public TMP_Text startText ,coinText, yourCoin;
     
 void Awake()
@@ -20,7 +22,9 @@ void Awake()
             //Adding the ships to the 
             ships[i].name = "StarSparrow"+(i+1).ToString();
             ships[i].index = i;
+          
             ships[i].price =i*30;
+           
             
         }
         //Checking which one the player has unclock , if player not unclock any then default first ship will be unclocked 
@@ -100,18 +104,7 @@ void Start()
             SceneManager.LoadScene("Level");
         }
         else{
-            int coin = PlayerPrefs.GetInt("Coin",0);
-            if(coin>=ships[currentShipIndex].price)
-            {   // reducing the coin amount     
-                coin =coin-ships[currentShipIndex].price;
-                // saving the coin update amount
-                PlayerPrefs.SetInt("Coin",coin);
-                // storing the unlocked ships
-                PlayerPrefs.SetInt(ships[currentShipIndex].name,1);
-                //unlocked ships 
-                ships[currentShipIndex].isUnlocked = true;
-                ships[currentShipIndex].price =0;
-            }
+            WhenTheShipBuy();
         }
    }
   public void UIUpdate()
@@ -129,5 +122,21 @@ void Start()
     coinText.text =  s.price.ToString();
     
   }
+private void WhenTheShipBuy()
+{
+    int coin = PlayerPrefs.GetInt("Coin",0);
+            if(coin>=ships[currentShipIndex].price)
+            {   // reducing the coin amount     
+                coin =coin-ships[currentShipIndex].price;
+                // saving the coin update amount
+                PlayerPrefs.SetInt("Coin",coin);
+                // storing the unlocked ships
+                PlayerPrefs.SetInt(ships[currentShipIndex].name,1);
+                //unlocked ships 
+                ships[currentShipIndex].isUnlocked = true;
+                ships[currentShipIndex].price =0;
+                shipUnlocked[shipUnlocked.Length]=currentShipIndex;
+            }
+}
   
 }
