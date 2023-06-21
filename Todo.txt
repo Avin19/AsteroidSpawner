@@ -4,7 +4,6 @@ making the ship unlocked every time new game runs
 
 Firing of the bullets that needs to Start
 
-
 Joystick control in place of touch based 
 
 booster for speed 
@@ -12,10 +11,14 @@ booster for speed
 
 working on trails 
 
+Game Manager
+Health zero ( Game Over Conditions)
 
 
-
-
-Audio Manager
+Audio Manager 
+Theme song integration is complete . Now working on the hit and low health sound .
 Add Emeny
-Ads ()
+
+Ads
+Ads () => Itegrated Iron source Banner ads are working .
+          Need to work on reward ads .

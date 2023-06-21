@@ -8,6 +8,9 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private GameOverHandler gameOverHandler;
     [SerializeField] private Animator mainCameraAnim;
+    private AudioSource audioPlayer;
+    public AudioClip hitAudio;
+    public AudioClip emAudio;
     public  float currentHealth=100f;
     private float maxHealth=100f;
     public Slider slider;
@@ -18,6 +21,8 @@ public class PlayerHealth : MonoBehaviour
        
        slider.maxValue = maxHealth;
        fill.color =gradient.Evaluate(1f);
+       audioPlayer = GameObject.Find("Audio").GetComponent<AudioSource>();
+
       
 
     }
@@ -25,17 +30,29 @@ public class PlayerHealth : MonoBehaviour
         slider.value =currentHealth;
        
     }
+    private bool check =true;
     void StartRedFlash()
     {
+       
         if( currentHealth <= 20f)
         {   redFlash.SetActive(true);
             Invoke(nameof(Flash),0.5f);
+            if(check)
+            {
+            audioPlayer.clip = emAudio;
+            audioPlayer.Play();
+            audioPlayer.loop =true;
+            check =false;
+            }
+           
         }
     }
     public void WhenAsteroidHitPlayer()
     {
         float damage = 5f;
         currentHealth -=damage;
+        audioPlayer.PlayOneShot(hitAudio,0.4f);
+        
         mainCameraAnim.SetBool("shake",true);
         Invoke(nameof(SetBoolValueToFalse), 1f);
         fill.color = gradient.Evaluate(slider.normalizedValue);

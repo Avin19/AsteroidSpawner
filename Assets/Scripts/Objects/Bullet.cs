@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -8,7 +7,7 @@ public class Bullet : MonoBehaviour
  
     void Update()
     {
-        Debug.Log(Player.transform.position);
+       // Debug.Log(Player.transform.position);
         
         
     }

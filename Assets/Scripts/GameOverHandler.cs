@@ -14,13 +14,17 @@ public class GameOverHandler : MonoBehaviour
     [SerializeField] GameObject pauseMenu;
     
 
-
+    private AudioSource audioPlayer;
+    private void Start() {
+        audioPlayer = GameObject.Find("Audio").GetComponent<AudioSource>();
+    }
     public void EndGame()
-
-    {    TimeController(0);
+    {    
         gameOverDisplay.gameObject.SetActive(true);
         asteroidSpwaner.enabled= false;
         gameOverText.text = "Game Over \n Your Score : " + scoreSystem.EndTimer();
+        audioPlayer.Stop();
+        TimeController(0);
     }
    public void PlayGame()
    {
@@ -37,11 +41,11 @@ public class GameOverHandler : MonoBehaviour
         scoreSystem.ResumeTimer();
         playerHealth.Alive();
         TimeController(1);
-
    }
    public void PauseMenuDisplay()
-   {   TimeController(0);
-       pauseMenu.SetActive(true);
+   {   
+        TimeController(0);
+        pauseMenu.SetActive(true);
    }
    public void PauseMenuContiune()
    {
@@ -52,4 +56,6 @@ public class GameOverHandler : MonoBehaviour
    {
         Time.timeScale =i;
    }
+  
+   
 }

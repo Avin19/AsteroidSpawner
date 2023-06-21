@@ -9,6 +9,7 @@ public class ShopManagerScript : MonoBehaviour
     public int currentShipIndex;
     public GameObject[] shipModels;
     public shipblueprint[] ships;
+    public Shipinform[] shipInfomStore;
 
     private int[] shipUnlocked;
     public TMP_Text startText ,coinText, yourCoin;
@@ -57,8 +58,6 @@ void Start()
                 ship.isUnlocked =false;
             }
         }
-       
-       
         
     }
     private void Update() {
@@ -136,6 +135,13 @@ private void WhenTheShipBuy()
                 ships[currentShipIndex].isUnlocked = true;
                 ships[currentShipIndex].price =0;
                 shipUnlocked[shipUnlocked.Length]=currentShipIndex;
+
+                // storing the information into the scriptiable object
+
+                foreach (shipblueprint ship in ships)
+                {
+                    
+                }
             }
 }
   
