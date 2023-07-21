@@ -5,22 +5,22 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638228810327694437
-    m_Hash: 3451379681
+      ticks: 638255009075919221
+    m_Hash: 88753894
   m_LockFileStatus:
     m_FilePath: D:/Game Developement/AsteroidSpawner/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638228810327736075
-    m_Hash: 4127688551
+      ticks: 638255009075949121
+    m_Hash: 1032041779
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
 m_ProjectPath: D:/Game Developement/AsteroidSpawner/Packages
-m_EditorVersion: 2021.3.24f1 (cf10dcf7010d)
+m_EditorVersion: 2021.3.16f1 (4016570cf34f)
 m_ResolvedPackages:
 - packageId: com.unity.ai.navigation@1.1.1
   testable: 0
@@ -178,23 +178,33 @@ m_ResolvedPackages:
     - 2.1.0-preview.5
     - 2.1.0-preview.6
     compatible:
+    - 1.17.7
+    - 2.0.0-preview.6
+    - 2.0.0-preview.8
+    - 2.0.0-preview.15
+    - 2.0.0-preview.17
+    - 2.0.0-preview.20
+    - 2.0.0-preview.21
+    - 2.0.0-preview.22
+    - 2.0.0
+    - 2.0.1
     - 2.0.3
     - 2.0.4
     - 2.0.5
     - 2.1.0-preview.3
     - 2.1.0-preview.5
     - 2.1.0-preview.6
-    verified: 2.0.5
+    verified: 1.17.7
   dependencies:
   - name: com.unity.services.core
     version: 1.0.1
   resolvedDependencies:
   - name: com.unity.services.core
-    version: 1.8.2
+    version: 1.6.0
   - name: com.unity.modules.unitywebrequest
     version: 1.0.0
   - name: com.unity.nuget.newtonsoft-json
-    version: 3.1.0
+    version: 3.0.2
   - name: com.unity.modules.androidjni
     version: 1.0.0
   keywords:
@@ -230,7 +240,7 @@ m_ResolvedPackages:
     revision: 1641a631fd39029595decb52bdfb641b32ed194c
     path: 
   unityLifecycle:
-    version: 2.0.3
+    version: 1.17.7
     nextVersion: 
 - packageId: com.unity.ide.rider@3.0.16
   testable: 0
@@ -293,6 +303,9 @@ m_ResolvedPackages:
     - 3.0.22
     - 3.0.24
     compatible:
+    - 3.0.16
+    - 3.0.17
+    - 3.0.18
     - 3.0.20
     - 3.0.21
     - 3.0.22
@@ -324,7 +337,7 @@ m_ResolvedPackages:
     revision: 9b718d58b8f7a34e564f2c79af6d2ca788e929d4
     path: 
   unityLifecycle:
-    version: 3.0.20
+    version: 3.0.16
     nextVersion: 
 - packageId: com.unity.ide.visualstudio@2.0.16
   testable: 0
@@ -370,6 +383,8 @@ m_ResolvedPackages:
     - 2.0.17
     - 2.0.18
     compatible:
+    - 2.0.16
+    - 2.0.17
     - 2.0.18
     verified: 2.0.18
   dependencies:
@@ -404,7 +419,7 @@ m_ResolvedPackages:
     revision: c01855ef6461b821ab0226135e96a4ee86de96be
     path: 
   unityLifecycle:
-    version: 2.0.18
+    version: 2.0.16
     nextVersion: 
 - packageId: com.unity.ide.vscode@1.2.5
   testable: 0
@@ -528,10 +543,14 @@ m_ResolvedPackages:
     - 1.5.0
     - 1.5.1
     - 1.6.1
+    - 1.6.3
     compatible:
+    - 1.4.4
+    - 1.5.0
     - 1.5.1
     - 1.6.1
-    verified: 1.5.1
+    - 1.6.3
+    verified: 1.4.4
   dependencies:
   - name: com.unity.modules.uielements
     version: 1.0.0
@@ -574,7 +593,7 @@ m_ResolvedPackages:
     revision: 59db7b7bcc31bad254947e3189e6ec125f67e3e7
     path: 
   unityLifecycle:
-    version: 1.5.1
+    version: 1.4.4
     nextVersion: 
 - packageId: com.unity.mobile.android-logcat@1.3.2
   testable: 0
@@ -706,6 +725,7 @@ m_ResolvedPackages:
     - 1.3.4
     - 1.3.5
     - 1.3.7
+    - 1.3.8
     - 2.0.1-exp.1
     - 2.0.1-exp.2
     - 2.0.1-pre.12
@@ -720,6 +740,7 @@ m_ResolvedPackages:
     - 1.3.4
     - 1.3.5
     - 1.3.7
+    - 1.3.8
     - 2.0.1-exp.1
     - 2.0.1-exp.2
     - 2.0.1-pre.12
@@ -886,6 +907,7 @@ m_ResolvedPackages:
     - 3.2.0-pre.2
     - 3.2.0-pre.3
     - 3.2.0-pre.4
+    - 3.2.0-pre.5
     - 4.0.0-pre.1
     - 4.0.0-pre.2
     compatible:
@@ -894,6 +916,7 @@ m_ResolvedPackages:
     - 3.2.0-pre.2
     - 3.2.0-pre.3
     - 3.2.0-pre.4
+    - 3.2.0-pre.5
     verified: 3.0.6
   dependencies:
   - name: com.unity.ugui
@@ -1029,10 +1052,12 @@ m_ResolvedPackages:
     - 1.7.2
     - 1.7.3
     - 1.7.4
+    - 1.7.5
     - 1.8.0
     - 1.8.1
     - 1.8.2
     - 1.8.3
+    - 1.8.4
     compatible:
     - 1.6.4
     - 1.6.5
@@ -1043,10 +1068,12 @@ m_ResolvedPackages:
     - 1.7.2
     - 1.7.3
     - 1.7.4
+    - 1.7.5
     - 1.8.0
     - 1.8.1
     - 1.8.2
     - 1.8.3
+    - 1.8.4
     verified: 1.6.5
   dependencies:
   - name: com.unity.modules.director
@@ -1093,6 +1120,113 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 1.6.4
     nextVersion: 
+- packageId: com.unity.toolchain.win-x86_64-linux-x86_64@2.0.5
+  testable: 0
+  isDirectDependency: 1
+  version: 2.0.5
+  source: 1
+  resolvedPath: D:\Game Developement\AsteroidSpawner\Library\PackageCache\com.unity.toolchain.win-x86_64-linux-x86_64@2.0.5
+  assetPath: Packages/com.unity.toolchain.win-x86_64-linux-x86_64
+  name: com.unity.toolchain.win-x86_64-linux-x86_64
+  displayName: Toolchain Win Linux x64
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: asset
+  description: Cross-compilation toolchain to build player target Linux x86_64 on
+    host Windows x86_64
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 0.1.4-preview
+    - 0.1.5-preview
+    - 0.1.6-preview
+    - 0.1.7-preview
+    - 0.1.8-preview
+    - 0.1.9-preview
+    - 0.1.10-preview
+    - 0.1.11-preview
+    - 0.1.13-preview
+    - 0.1.14-preview
+    - 0.1.15-preview
+    - 0.1.16-preview
+    - 0.1.17-preview
+    - 0.1.18-preview
+    - 0.1.19-preview
+    - 0.1.20-preview
+    - 0.1.21-preview
+    - 1.0.0
+    - 2.0.0
+    - 2.0.1
+    - 2.0.2
+    - 2.0.3
+    - 2.0.4
+    - 2.0.5
+    compatible:
+    - 0.1.4-preview
+    - 0.1.5-preview
+    - 0.1.6-preview
+    - 0.1.7-preview
+    - 0.1.8-preview
+    - 0.1.9-preview
+    - 0.1.10-preview
+    - 0.1.11-preview
+    - 0.1.13-preview
+    - 0.1.14-preview
+    - 0.1.15-preview
+    - 0.1.16-preview
+    - 0.1.17-preview
+    - 0.1.18-preview
+    - 0.1.19-preview
+    - 0.1.20-preview
+    - 0.1.21-preview
+    - 1.0.0
+    - 2.0.0
+    - 2.0.1
+    - 2.0.2
+    - 2.0.3
+    - 2.0.4
+    - 2.0.5
+    verified: 
+  dependencies:
+  - name: com.unity.sysroot
+    version: 2.0.6
+  - name: com.unity.sysroot.linux-x86_64
+    version: 2.0.5
+  resolvedDependencies:
+  - name: com.unity.sysroot
+    version: 2.0.6
+  - name: com.unity.sysroot.linux-x86_64
+    version: 2.0.5
+  keywords:
+  - toolchain
+  - windows
+  - linux
+  - cross-compilation
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 0
+  isAssetStorePackage: 0
+  datePublishedTicks: 638192332090000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.toolchain.win-x86_64-linux-x86_64@2.0/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/com.unity.sysroot.git
+    revision: 51a7fbe63b09f6d0f31f346c0758152899a52668
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
 - packageId: com.unity.ugui@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -1118,6 +1252,7 @@ m_ResolvedPackages:
     all:
     - 1.0.0
     - 3.0.0-exp.1
+    - 3.0.0-exp.3
     compatible:
     - 1.0.0
     verified: 1.0.0
@@ -2930,6 +3065,181 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 
     nextVersion: 
+- packageId: com.unity.sysroot@2.0.6
+  testable: 0
+  isDirectDependency: 0
+  version: 2.0.6
+  source: 1
+  resolvedPath: D:\Game Developement\AsteroidSpawner\Library\PackageCache\com.unity.sysroot@2.0.6
+  assetPath: Packages/com.unity.sysroot
+  name: com.unity.sysroot
+  displayName: Sysroot Base
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: asset
+  description: This is the base sysroot package required by all sysroot and toolchain
+    packages
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 0.1.7-preview
+    - 0.1.8-preview
+    - 0.1.9-preview
+    - 0.1.10-preview
+    - 0.1.11-preview
+    - 0.1.12-preview
+    - 0.1.14-preview
+    - 0.1.15-preview
+    - 0.1.16-preview
+    - 0.1.17-preview
+    - 0.1.18-preview
+    - 0.1.19-preview
+    - 1.0.0
+    - 2.0.0
+    - 2.0.2
+    - 2.0.3
+    - 2.0.4
+    - 2.0.5
+    - 2.0.6
+    compatible:
+    - 0.1.7-preview
+    - 0.1.8-preview
+    - 0.1.9-preview
+    - 0.1.10-preview
+    - 0.1.11-preview
+    - 0.1.12-preview
+    - 0.1.14-preview
+    - 0.1.15-preview
+    - 0.1.16-preview
+    - 0.1.17-preview
+    - 0.1.18-preview
+    - 0.1.19-preview
+    - 1.0.0
+    - 2.0.0
+    - 2.0.2
+    - 2.0.3
+    - 2.0.4
+    - 2.0.5
+    - 2.0.6
+    verified: 
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - unity
+  - linux
+  - sysroot
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 0
+  isAssetStorePackage: 0
+  datePublishedTicks: 638192331380000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.sysroot@2.0/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/com.unity.sysroot.git
+    revision: 51a7fbe63b09f6d0f31f346c0758152899a52668
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
+- packageId: com.unity.sysroot.linux-x86_64@2.0.5
+  testable: 0
+  isDirectDependency: 0
+  version: 2.0.5
+  source: 1
+  resolvedPath: D:\Game Developement\AsteroidSpawner\Library\PackageCache\com.unity.sysroot.linux-x86_64@2.0.5
+  assetPath: Packages/com.unity.sysroot.linux-x86_64
+  name: com.unity.sysroot.linux-x86_64
+  displayName: Sysroot Linux x64
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: asset
+  description: Sysroot used to build unity player for linux x86_64
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 0.1.6-preview
+    - 0.1.7-preview
+    - 0.1.8-preview
+    - 0.1.9-preview
+    - 0.1.10-preview
+    - 0.1.11-preview
+    - 0.1.12-preview
+    - 0.1.13-preview
+    - 0.1.14-preview
+    - 0.1.15-preview
+    - 1.0.0
+    - 2.0.0
+    - 2.0.1
+    - 2.0.2
+    - 2.0.3
+    - 2.0.4
+    - 2.0.5
+    compatible:
+    - 0.1.6-preview
+    - 0.1.7-preview
+    - 0.1.8-preview
+    - 0.1.9-preview
+    - 0.1.10-preview
+    - 0.1.11-preview
+    - 0.1.12-preview
+    - 0.1.13-preview
+    - 0.1.14-preview
+    - 0.1.15-preview
+    - 1.0.0
+    - 2.0.0
+    - 2.0.1
+    - 2.0.2
+    - 2.0.3
+    - 2.0.4
+    - 2.0.5
+    verified: 
+  dependencies:
+  - name: com.unity.sysroot
+    version: 2.0.6
+  resolvedDependencies:
+  - name: com.unity.sysroot
+    version: 2.0.6
+  keywords:
+  - unity
+  - linux
+  - sysroot
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 0
+  isAssetStorePackage: 0
+  datePublishedTicks: 638192331470000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.sysroot.linux-x86_64@2.0/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/com.unity.sysroot.git
+    revision: 51a7fbe63b09f6d0f31f346c0758152899a52668
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
 - packageId: com.unity.ext.nunit@1.0.6
   testable: 0
   isDirectDependency: 0
@@ -2959,10 +3269,14 @@ m_ResolvedPackages:
     - 1.0.6
     - 2.0.2
     - 2.0.3
+    - 2.0.4
+    - 2.0.5
     compatible:
     - 1.0.6
     - 2.0.2
     - 2.0.3
+    - 2.0.4
+    - 2.0.5
     verified: 1.0.6
   dependencies: []
   resolvedDependencies: []
@@ -2991,12 +3305,12 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 1.0.6
     nextVersion: 
-- packageId: com.unity.services.core@1.8.2
+- packageId: com.unity.services.core@1.6.0
   testable: 0
   isDirectDependency: 0
-  version: 1.8.2
+  version: 1.6.0
   source: 1
-  resolvedPath: D:\Game Developement\AsteroidSpawner\Library\PackageCache\com.unity.services.core@1.8.2
+  resolvedPath: D:\Game Developement\AsteroidSpawner\Library\PackageCache\com.unity.services.core@1.6.0
   assetPath: Packages/com.unity.services.core
   name: com.unity.services.core
   displayName: Services Core
@@ -3039,10 +3353,14 @@ m_ResolvedPackages:
     - 1.9.0
     - 1.10.1
     compatible:
+    - 1.6.0
+    - 1.7.0
+    - 1.7.1
+    - 1.8.1
     - 1.8.2
     - 1.9.0
     - 1.10.1
-    verified: 1.8.2
+    verified: 1.6.0
   dependencies:
   - name: com.unity.modules.unitywebrequest
     version: 1.0.0
@@ -3054,7 +3372,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.unitywebrequest
     version: 1.0.0
   - name: com.unity.nuget.newtonsoft-json
-    version: 3.1.0
+    version: 3.0.2
   - name: com.unity.modules.androidjni
     version: 1.0.0
   keywords: []
@@ -3068,23 +3386,23 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 0
   isAssetStorePackage: 0
-  datePublishedTicks: 638162786460000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.services.core@1.8/manual/index.html
+  datePublishedTicks: 638030857680000000
+  documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
-    revision: 76259ae8be68ef4e25a5783d8bcf476d7ed09d17
+    revision: 815a0c96703c69956fde4fc798e35dd8d0cc3af1
     path: 
   unityLifecycle:
-    version: 1.8.2
+    version: 1.6.0
     nextVersion: 
-- packageId: com.unity.nuget.newtonsoft-json@3.1.0
+- packageId: com.unity.nuget.newtonsoft-json@3.0.2
   testable: 0
   isDirectDependency: 0
-  version: 3.1.0
+  version: 3.0.2
   source: 1
-  resolvedPath: D:\Game Developement\AsteroidSpawner\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.1.0
+  resolvedPath: D:\Game Developement\AsteroidSpawner\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2
   assetPath: Packages/com.unity.nuget.newtonsoft-json
   name: com.unity.nuget.newtonsoft-json
   displayName: Newtonsoft Json
@@ -3095,7 +3413,7 @@ m_ResolvedPackages:
   category: 
   type: library
   description: 'Newtonsoft Json for use in Unity projects and Unity packages. Currently
-    synced to version 13.0.2.
+    synced to version 13.0.1.
 
 
     This package is used for advanced json serialization
@@ -3125,10 +3443,11 @@ m_ResolvedPackages:
     - 3.2.0
     - 3.2.1
     compatible:
+    - 3.0.2
     - 3.1.0
     - 3.2.0
     - 3.2.1
-    verified: 3.1.0
+    verified: 3.0.2
   dependencies: []
   resolvedDependencies: []
   keywords: []
@@ -3142,14 +3461,14 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638143166550000000
+  datePublishedTicks: 637846828220000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.nuget.newtonsoft-json.git
-    revision: 686b43c15210b5f3e0145e51147079a8d2551bd9
+    revision: 8f66870a71ad3f2cdd46330b5c482dfd138ffc64
     path: 
   unityLifecycle:
-    version: 3.1.0
+    version: 3.0.2
     nextVersion: 

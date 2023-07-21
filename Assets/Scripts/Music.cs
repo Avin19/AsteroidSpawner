@@ -5,6 +5,7 @@ using UnityEngine;
 public class Music : MonoBehaviour
 {
     private AudioSource audioTheme;
+    [SerializeField]private AudioClip clickAudio;
 
     private void Awake() {
         DontDestroyOnLoad(transform.gameObject);
@@ -18,6 +19,10 @@ public class Music : MonoBehaviour
     public void StopMusic()
     {
         audioTheme.Stop();
+    }
+    public void ClickMusic()
+    {
+        audioTheme.PlayOneShot(clickAudio,0.6f);
     }
 }
 

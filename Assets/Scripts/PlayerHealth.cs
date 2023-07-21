@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
+    
     [SerializeField] private GameOverHandler gameOverHandler;
     [SerializeField] private Animator mainCameraAnim;
     private AudioSource audioPlayer;

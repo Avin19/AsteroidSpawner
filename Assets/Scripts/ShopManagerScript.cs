@@ -9,7 +9,7 @@ public class ShopManagerScript : MonoBehaviour
     public int currentShipIndex;
     public GameObject[] shipModels;
     public shipblueprint[] ships;
-    public Shipinform[] shipInfomStore;
+    
 
     private int[] shipUnlocked;
     public TMP_Text startText ,coinText, yourCoin;
@@ -25,6 +25,9 @@ void Awake()
             ships[i].index = i;
           
             ships[i].price =i*30;
+            if(i==0) {ships[i].isUnlocked = true;}
+            else {
+            ships[i].isUnlocked =false;}
            
             
         }
@@ -35,7 +38,7 @@ void Awake()
         {
             ship.SetActive(false);
         }
-        //unclock the ship at currentshipindex
+        //unlock the ship at currentshipindex
         shipModels[playerShipIndex].SetActive(true);
         
   }
@@ -60,7 +63,7 @@ void Start()
         }
         
     }
-    private void Update() {
+     void Update() {
      UIUpdate();
     }
    public void ChangeNext()
@@ -75,7 +78,6 @@ void Start()
         }
       
         shipModels[currentShipIndex].SetActive(true);
-        PlayerPrefs.SetInt("SelectedShip",currentShipIndex);
        
        
    }
@@ -92,7 +94,6 @@ void Start()
         }
         
         shipModels[currentShipIndex].SetActive(true);
-        PlayerPrefs.SetInt("SelectedShip",currentShipIndex);
         
    }
    public void StartingGame()
@@ -128,9 +129,9 @@ private void WhenTheShipBuy()
             {   // reducing the coin amount     
                 coin =coin-ships[currentShipIndex].price;
                 // saving the coin update amount
-                PlayerPrefs.SetInt("Coin",coin);
+                PlayerPrefs.SetInt("Coin",400);
                 // storing the unlocked ships
-                PlayerPrefs.SetInt(ships[currentShipIndex].name,1);
+                //PlayerPrefs.SetInt(ships[currentShipIndex].name,1);
                 //unlocked ships 
                 ships[currentShipIndex].isUnlocked = true;
                 ships[currentShipIndex].price =0;
@@ -138,10 +139,6 @@ private void WhenTheShipBuy()
 
                 // storing the information into the scriptiable object
 
-                foreach (shipblueprint ship in ships)
-                {
-                    
-                }
             }
 }
   

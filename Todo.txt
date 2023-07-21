@@ -1,5 +1,6 @@
 Update on 06/May /2023
 storing the player purchase 
+
 making the ship unlocked every time new game runs
 
 Firing of the bullets that needs to Start
@@ -12,11 +13,14 @@ booster for speed
 working on trails 
 
 Game Manager
-Health zero ( Game Over Conditions)
+Completed 21 June 2023
 
 
 Audio Manager 
-Theme song integration is complete . Now working on the hit and low health sound .
+level secne click sound remaining 
+Completed 21 June 2023
+
+Shop Manager 
 Add Emeny
 
 Ads
