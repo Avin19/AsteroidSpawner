@@ -59,15 +59,13 @@ public class PlayerController : MonoBehaviour
         rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxVelocity);
     }
     private void ProcessInput(){
-            if(Touchscreen.current.primaryTouch.press.isPressed){
+           
                      Vector2 mousePosition = Vector2.zero;
-                     mousePosition= Touchscreen.current.primaryTouch.position.ReadValue();
+                     mousePosition= Input.mousePosition;
                     Vector2 worldPosition =mainCamera.ScreenToWorldPoint(mousePosition);
+                    Debug.Log(worldPosition);
                         movementDirection = worldPosition- new Vector2(transform.position.x, transform.position.y);
                      movementDirection.Normalize();
-        }
-        else{
-            movementDirection = Vector2.zero;
-        }
+       
     }
 }
