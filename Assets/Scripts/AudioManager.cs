@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public static AudioManager Instance { get; private set;}
+    private AudioSource audioSource;
+   
+    [SerializeField]private AudioClip[] audioClips;
+    private void Awake()
+    {
+        if(Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void HitAsteroid()
     {
-        
+        audioSource.PlayOneShot(audioClips[0]);
     }
+    public void Emergency()
+    {
+        audioSource.clip = audioClips[1];
+    }
+
+   
 }

@@ -3,14 +3,26 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] GameObject Player ;
+    private Transform player;
+    [SerializeField] private Transform pfBullet;
+    private Camera mainCamera;
+
+    private void Awake()
+    {
+        player = GetComponent<Transform>();
+        mainCamera = Camera.main;
+    }
  
     void Update()
     {
-       // Debug.Log(Player.transform.position);
-        
+       
+        if(Input.GetMouseButtonDown(0))
+        {
+           Transform bullet = Instantiate(pfBullet,transform.position,Quaternion.identity);
+           bullet.GetComponent<BulletProjectile>().Setup(mainCamera.ScreenToWorldPoint(Input.mousePosition));
+
+        }
         
     }
-    // If tap on the screen then fire a missile forward direction
-    // special weapon  homing missile , mines ( if possible )
+    
 }

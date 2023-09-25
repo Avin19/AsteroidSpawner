@@ -1,71 +1,70 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 public class PlayerController : MonoBehaviour
-{   private Camera  mainCamera;
+{
+    private Camera mainCamera;
+    private Vector3 movementDirection;
+    private PlayerInput inputAction;
     private Rigidbody rb;
-    [SerializeField] private float forceMagnitude;
-    [SerializeField] private float maxVelocity;
-    [SerializeField] private float rotationSpeed;
-    
-    private Vector2 movementDirection;
-    
+    [SerializeField] private MovementJoystick movementJoystick;
+    [SerializeField] private float playerSpeed;
     void Start()
     {
-        mainCamera =Camera.main;
+        mainCamera = Camera.main;
+        inputAction = GetComponent<PlayerInput>();
         rb = GetComponent<Rigidbody>();
     }
 
-    
-    void Update()
-    {   ProcessInput();
+
+    void FixedUpdate()
+    {
         KeepThePlayerOnScreen();
-        RotateToFaceVelocity();
+        Movement();
     }
 
-    private void RotateToFaceVelocity()
-    {   if(rb.velocity == Vector3.zero){return;}
-       Quaternion targetRotation = Quaternion.LookRotation(rb.velocity,Vector3.back);
-      transform.rotation= Quaternion.Lerp(transform.rotation,targetRotation,rotationSpeed*Time.deltaTime);
-    }
+
 
     private void KeepThePlayerOnScreen()
-    {   Vector3 newPosition = transform.position;
+    {
+        Vector3 newPosition = transform.position;
 
-        Vector3 viewportPosition=mainCamera.WorldToViewportPoint(transform.position);
-        
-        if(viewportPosition.x>1)
-        {  
-            newPosition.x =-newPosition.x+0.1f;
-            
-        }
-        else if (viewportPosition.x<0)
+        Vector3 viewportPosition = mainCamera.WorldToViewportPoint(transform.position);
+
+        if (viewportPosition.x > 1)
         {
-            newPosition.x = -newPosition.x-0.1f;
+            newPosition.x = -newPosition.x + 0.1f;
+
         }
-        else if( viewportPosition.y>1){
-            newPosition.y = -newPosition.y+0.1f;
+        else if (viewportPosition.x < 0)
+        {
+            newPosition.x = -newPosition.x - 0.1f;
         }
-        else if( viewportPosition.y<0){
-            newPosition.y = -newPosition.y-0.1f;
+        else if (viewportPosition.y > 1)
+        {
+            newPosition.y = -newPosition.y + 0.1f;
         }
-       transform.position = newPosition;
+        else if (viewportPosition.y < 0)
+        {
+            newPosition.y = -newPosition.y - 0.1f;
+        }
+        transform.position = newPosition;
     }
 
-    private void FixedUpdate() {
-        if (movementDirection == Vector2.zero){return;}
+    private void Movement()
+    {
+        Vector2 joystickVec = movementJoystick.JoystickVector();
+        if(joystickVec.y != 0)
+        {
+            rb.velocity  = new Vector3(joystickVec.x*playerSpeed , joystickVec.y*playerSpeed , 0);
+            transform.eulerAngles = new Vector3(joystickVec.x*360f , 90f,90f);
+        }
+        else
+        {
+            rb.velocity = Vector3.zero;
+        }
+    }
 
-        rb.AddForce(movementDirection*forceMagnitude*Time.deltaTime,ForceMode.Force);
-        rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxVelocity);
-    }
-    private void ProcessInput(){
-           
-                     Vector2 mousePosition = Vector2.zero;
-                     mousePosition= Input.mousePosition;
-                    Vector2 worldPosition =mainCamera.ScreenToWorldPoint(mousePosition);
-                    Debug.Log(worldPosition);
-                        movementDirection = worldPosition- new Vector2(transform.position.x, transform.position.y);
-                     movementDirection.Normalize();
-       
-    }
 }

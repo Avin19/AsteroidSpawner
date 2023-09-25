@@ -75,8 +75,7 @@ public class AsteroidSpwaner : MonoBehaviour
             asteroidPrefabs[Random.Range(0,asteroidPrefabs.Length)], 
             worldSpawn , 
             Quaternion.Euler(0f,0f,Random.Range(0f,360f)) );
-            Rigidbody rb = asteroidInstance.GetComponent<Rigidbody>();
-            rb.velocity = direction.normalized*Random.Range(forceRange.x,forceRange.y);
+           
     
             timer += secondBetweenAsteroids;
         }

@@ -11,11 +11,13 @@ public class Music : MonoBehaviour
     private void Awake() {
         DontDestroyOnLoad(transform.gameObject);
         audioTheme = GetComponent<AudioSource>();
+        audioTheme.volume = 0.1f;
     }
     public void PlayMusic()
     {
         if(audioTheme.isPlaying) return ;
         audioTheme.Play();
+        
     }
     public void StopMusic()
     {

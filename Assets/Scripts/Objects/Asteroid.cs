@@ -21,7 +21,14 @@ public class Asteroid : MonoBehaviour
             
             OnBecameInvisible();
         }
+        if(other.gameObject.tag == "Bullet")
+        {
+            OnBecameInvisible();
+        }
+        Debug.Log(other.gameObject.tag);
+        
     }
+    
     private void OnBecameInvisible() {
         //visible effects can be implemented such as particle
 
