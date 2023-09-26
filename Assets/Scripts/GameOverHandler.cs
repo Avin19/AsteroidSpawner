@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using TMPro;
-using UnityEditor.UI;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -65,7 +65,7 @@ public class GameOverHandler : MonoBehaviour
         gameOverDisplay.gameObject.SetActive(false);
         asteroidSpwaner.enabled= true;
         scoreSystem.ResumeTimer();
-        
+
         TimeController(1);
    }
    public void PauseMenuDisplay()
