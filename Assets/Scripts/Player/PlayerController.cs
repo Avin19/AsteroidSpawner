@@ -59,7 +59,8 @@ public class PlayerController : MonoBehaviour
         if(joystickVec.y != 0)
         {
             rb.velocity  = new Vector3(joystickVec.x*playerSpeed , joystickVec.y*playerSpeed , 0);
-            transform.eulerAngles = new Vector3(joystickVec.x*360f , 90f,90f);
+            float targetAngle  = Mathf.Atan2(joystickVec.y,joystickVec.x)* Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(-targetAngle,90f,90f);
         }
         else
         {
