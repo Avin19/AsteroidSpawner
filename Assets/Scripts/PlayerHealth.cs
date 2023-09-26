@@ -41,11 +41,10 @@ public class PlayerHealth : MonoBehaviour
       
         if (currentHealth <= 0f)
         {
-            Crash();
+            gameOverHandler.EndGame();
         }
     }
 
-    // red flash low health 
    
    
 
@@ -55,16 +54,7 @@ public class PlayerHealth : MonoBehaviour
         mainCameraAnim.SetBool("shake", false);
     }
     // Game Over 
-    public void Crash()
-    {
-        gameOverHandler.EndGame();
-        gameObject.SetActive(false);
-    }
-    // watch ad to get to play again
-    public void Alive()
-    {
-        gameObject.SetActive(true);
-    }
+  
     public float GetHealth()
     {
         return currentHealth;

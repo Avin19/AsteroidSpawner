@@ -12,17 +12,17 @@ public class Bullet : MonoBehaviour
         player = GetComponent<Transform>();
         mainCamera = Camera.main;
     }
- 
+
     void Update()
     {
-       
-        if(Input.GetMouseButtonDown(0))
+
+        if (Input.GetMouseButtonDown(1))
         {
-           Transform bullet = Instantiate(pfBullet,transform.position,Quaternion.identity);
-           bullet.GetComponent<BulletProjectile>().Setup(mainCamera.ScreenToWorldPoint(Input.mousePosition));
+            Transform bullet = Instantiate(pfBullet, transform.position, Quaternion.identity);
+            bullet.GetComponent<BulletProjectile>().Setup(mainCamera.ScreenToWorldPoint(Input.mousePosition));
 
         }
-        
+
     }
-    
+
 }

@@ -6,6 +6,8 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set;}
     private AudioSource audioSource;
+
+
    
     [SerializeField]private AudioClip[] audioClips;
     private void Awake()
@@ -20,15 +22,21 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        audioSource.volume =0.1f;
     }
 
     public void HitAsteroid()
     {
         audioSource.PlayOneShot(audioClips[0]);
+  
     }
     public void Emergency()
     {
-        audioSource.clip = audioClips[1];
+       audioSource.PlayOneShot(audioClips[1]);
+    }
+    public void CoinCollected()
+    {
+        audioSource.PlayOneShot(audioClips[2]);
     }
 
    

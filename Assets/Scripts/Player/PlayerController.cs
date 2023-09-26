@@ -6,15 +6,14 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     private Camera mainCamera;
-    private Vector3 movementDirection;
-    private PlayerInput inputAction;
+
     private Rigidbody rb;
     [SerializeField] private MovementJoystick movementJoystick;
     [SerializeField] private float playerSpeed;
     void Start()
     {
         mainCamera = Camera.main;
-        inputAction = GetComponent<PlayerInput>();
+   
         rb = GetComponent<Rigidbody>();
     }
 
@@ -24,8 +23,15 @@ public class PlayerController : MonoBehaviour
         KeepThePlayerOnScreen();
         Movement();
     }
-
-
+    
+    private void OnCollisionEnter(Collision collider)
+    {
+        if( collider.gameObject.tag == "Asteriod")
+        {
+            transform.GetComponent<PlayerHealth>().WhenAsteroidHitPlayer();
+        }
+    }
+  
 
     private void KeepThePlayerOnScreen()
     {
@@ -64,7 +70,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            rb.velocity = Vector3.zero;
+            rb.velocity  = new Vector3(joystickVec.x*playerSpeed, joystickVec.y*playerSpeed , 0);
         }
     }
 

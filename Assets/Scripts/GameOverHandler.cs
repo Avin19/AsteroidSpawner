@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using TMPro;
+using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,9 +14,13 @@ public class GameOverHandler : MonoBehaviour
     [SerializeField] ScoreSystem scoreSystem;
     [SerializeField] PlayerHealth playerHealth;
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject redFlash;
+   
     
-
+    private float health;
+    private bool check =true;
     private AudioSource audioPlayer;
+    private float timer=1f;
     private void Start() {
         audioPlayer = GameObject.Find("Audio").GetComponent<AudioSource>();
     }
@@ -25,6 +31,26 @@ public class GameOverHandler : MonoBehaviour
         gameOverText.text = "Game Over \n Your Score : " + scoreSystem.EndTimer();
         audioPlayer.Stop();
         TimeController(0);
+    }
+    private void Update()
+    {
+
+        health = playerHealth.GetHealth();
+        if (health <= 20f)
+        {
+            timer -= Time.deltaTime;
+            if(timer <= 0f)
+            {
+                redFlash.SetActive(!redFlash.activeSelf);
+                timer =1f;
+            }
+    
+            if (check)
+            {
+                check = false;
+                AudioManager.Instance.Emergency();
+            }
+        }
     }
    public void PlayGame()
    {
@@ -39,7 +65,7 @@ public class GameOverHandler : MonoBehaviour
         gameOverDisplay.gameObject.SetActive(false);
         asteroidSpwaner.enabled= true;
         scoreSystem.ResumeTimer();
-        playerHealth.Alive();
+        
         TimeController(1);
    }
    public void PauseMenuDisplay()

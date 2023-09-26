@@ -22,7 +22,7 @@ public class AsteroidSpwaner : MonoBehaviour
     
     private void Update() {
         SpawnAsteroid();
-        secondBetweenAsteroids =Random.Range(0.2f,0.3f);
+        secondBetweenAsteroids =Random.Range(0.2f,1f);
        
     }
     
@@ -71,12 +71,9 @@ public class AsteroidSpwaner : MonoBehaviour
             Vector3 worldSpawn =mainCamera.ViewportToWorldPoint(spwanPoint);
             
             worldSpawn.z =0;
-            GameObject asteroidInstance=Instantiate(
-            asteroidPrefabs[Random.Range(0,asteroidPrefabs.Length)], 
-            worldSpawn , 
-            Quaternion.Euler(0f,0f,Random.Range(0f,360f)) );
-           
-    
+            GameObject asteroidInstance=Instantiate(asteroidPrefabs[Random.Range(0,asteroidPrefabs.Length)], worldSpawn ,Quaternion.Euler(0f,0f,Random.Range(0f,360f)) );
+            Rigidbody rb = asteroidInstance.GetComponent<Rigidbody>();
+            rb.velocity = worldSpawn * -1f;
             timer += secondBetweenAsteroids;
         }
 
