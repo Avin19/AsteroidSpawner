@@ -1,0 +1,9 @@
+@startuml
+class BulletProjectile {
+    - targetPosition : Vector3
+    + Setup(targetPosition:Vector3) : void
+    - Update() : void
+    - Destorying() : void
+}
+MonoBehaviour <|-- BulletProjectile
+@enduml

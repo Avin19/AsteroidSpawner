@@ -1,0 +1,17 @@
+@startuml
+class Ads {
+    - appKey : string = "166afeb95"
+    - Start() : void
+    - OnEnable() : void
+    - OnApplicationPause(isPaused:bool) : void
+    + LoadBanner() : void
+    - SdkInitializationCompletedEvent() : void
+    - BannerOnAdLoadedEvent(adInfo:IronSourceAdInfo) : void
+    - BannerOnAdLoadFailedEvent(ironSourceError:IronSourceError) : void
+    - BannerOnAdClickedEvent(adInfo:IronSourceAdInfo) : void
+    - BannerOnAdScreenPresentedEvent(adInfo:IronSourceAdInfo) : void
+    - BannerOnAdScreenDismissedEvent(adInfo:IronSourceAdInfo) : void
+    - BannerOnAdLeftApplicationEvent(adInfo:IronSourceAdInfo) : void
+}
+MonoBehaviour <|-- Ads
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+class Shipinform {
+    + shipinforms : Shipinformation[]
+    + ShipName(index:int) : string
+    + ShipPerfab(index:int) : GameObject
+    + ShipHealth(index:int) : int
+    + ShipCost(index:int) : int
+    + ShipPurchased(index:int) : bool
+    + SetShipPurchased(index:int) : void
+}
+ScriptableObject <|-- Shipinform
+@enduml

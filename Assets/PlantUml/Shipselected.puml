@@ -1,0 +1,8 @@
+@startuml
+class Shipselected {
+    + Shipholder : GameObject[]
+    - currentplayerShip : int
+    - Start() : void
+}
+MonoBehaviour <|-- Shipselected
+@enduml

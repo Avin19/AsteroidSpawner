@@ -1,0 +1,17 @@
+@startuml
+class PlayerHealth {
+    - gameOverHandler : GameOverHandler
+    - mainCameraAnim : Animator
+    + currentHealth : float = 100f
+    - maxHealth : float = 100f
+    + slider : Slider
+    + gradient : Gradient
+    + fill : Image
+    - Start() : void
+    - Update() : void
+    + WhenAsteroidHitPlayer() : void
+    - SetBoolValueToFalse() : void
+    + GetHealth() : float
+}
+MonoBehaviour <|-- PlayerHealth
+@enduml

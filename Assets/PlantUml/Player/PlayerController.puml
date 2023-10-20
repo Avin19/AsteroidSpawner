@@ -1,0 +1,14 @@
+@startuml
+class PlayerController {
+    - mainCamera : Camera
+    - rb : Rigidbody
+    - movementJoystick : MovementJoystick
+    - playerSpeed : float
+    - Start() : void
+    - FixedUpdate() : void
+    - OnCollisionEnter(collider:Collision) : void
+    - KeepThePlayerOnScreen() : void
+    - Movement() : void
+}
+MonoBehaviour <|-- PlayerController
+@enduml

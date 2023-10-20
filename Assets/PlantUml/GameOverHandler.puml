@@ -1,0 +1,25 @@
+@startuml
+class GameOverHandler {
+    - gameOverDisplay : GameObject
+    - asteroidSpwaner : AsteroidSpwaner
+    - gameOverText : TMP_Text
+    - scoreSystem : ScoreSystem
+    - playerHealth : PlayerHealth
+    - pauseMenu : GameObject
+    - redFlash : GameObject
+    - health : float
+    - check : bool = true
+    - audioPlayer : AudioSource
+    - timer : float = 1f
+    - Start() : void
+    + EndGame() : void
+    - Update() : void
+    + PlayGame() : void
+    + ReturnMainMenu() : void
+    - ResumeGame() : void
+    + PauseMenuDisplay() : void
+    + PauseMenuContiune() : void
+    - TimeController(i:int) : void
+}
+MonoBehaviour <|-- GameOverHandler
+@enduml

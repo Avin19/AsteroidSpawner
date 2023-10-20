@@ -1,0 +1,20 @@
+@startuml
+class ShopManagerScript {
+    + playerShipIndex : int
+    + currentShipIndex : int = 0
+    - pfShip : GameObject
+    + startText : TMP_Text
+    + coinText : TMP_Text
+    + yourCoin : TMP_Text
+    + shipinform : Shipinform
+    - Start() : void
+    - Ship(index:int) : void
+    - Update() : void
+    + ChangeNext() : void
+    + ChangePervious() : void
+    + StartingGame() : void
+    + UIUpdate() : void
+    - WhenTheShipBuy() : void
+}
+MonoBehaviour <|-- ShopManagerScript
+@enduml

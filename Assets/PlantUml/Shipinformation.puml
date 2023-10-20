@@ -1,0 +1,10 @@
+@startuml
+class Shipinformation {
+    + shipName : string
+    + pfship : GameObject
+    + shipPurchaseCost : int
+    + shipHealth : int
+    + isPurchased : bool = false
+}
+ScriptableObject <|-- Shipinformation
+@enduml

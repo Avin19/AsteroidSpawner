@@ -1,0 +1,13 @@
+@startuml
+class AudioManager {
+    + {static} Instance : AudioManager <<get>>
+    - audioSource : AudioSource
+    - audioClips : AudioClip[]
+    - Awake() : void
+    - Start() : void
+    + HitAsteroid() : void
+    + Emergency() : void
+    + CoinCollected() : void
+}
+MonoBehaviour <|-- AudioManager
+@enduml

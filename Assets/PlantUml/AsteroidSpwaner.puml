@@ -1,0 +1,14 @@
+@startuml
+class AsteroidSpwaner {
+    - asteroidPrefabs : GameObject[]
+    - secondBetweenAsteroids : float
+    - forceRange : Vector2
+    - ship : Transform
+    - timer : float
+    - mainCamera : Camera
+    - Start() : void
+    - Update() : void
+    - SpawnAsteroid() : void
+}
+MonoBehaviour <|-- AsteroidSpwaner
+@enduml

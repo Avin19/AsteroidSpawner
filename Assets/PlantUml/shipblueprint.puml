@@ -1,0 +1,8 @@
+@startuml
+class shipblueprint {
+    + name : string
+    + index : int
+    + price : int
+    + isUnlocked : bool
+}
+@enduml

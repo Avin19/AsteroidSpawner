@@ -1,0 +1,16 @@
+@startuml
+class MovementJoystick {
+    - joystick : GameObject
+    - JoystickBg : GameObject
+    - joystickVec : Vector2
+    - joystickTouchPos : Vector2
+    - joystickOriginalPos : Vector2
+    - joystickRadius : float
+    - Start() : void
+    + PointerDown() : void
+    + Drag(baseEventData:BaseEventData) : void
+    + PointerUp() : void
+    + JoystickVector() : Vector2
+}
+MonoBehaviour <|-- MovementJoystick
+@enduml

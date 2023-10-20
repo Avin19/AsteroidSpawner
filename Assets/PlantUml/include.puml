@@ -1,0 +1,18 @@
+@startuml
+!include .\\Ads.puml
+!include .\\AsteroidSpwaner.puml
+!include .\\AudioManager.puml
+!include .\\BulletProjectile.puml
+!include .\\GameOverHandler.puml
+!include .\\MainMenu.puml
+!include .\\Music.puml
+!include .\\PlayerHealth.puml
+!include .\\shipblueprint.puml
+!include .\\Shipinform.puml
+!include .\\Shipinformation.puml
+!include .\\Shipselected.puml
+!include .\\ShopManagerScript.puml
+!include .\\Spawner.puml
+!include .\\Player\MovementJoystick.puml
+!include .\\Player\PlayerController.puml
+@enduml

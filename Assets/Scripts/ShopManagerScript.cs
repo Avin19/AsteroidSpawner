@@ -5,65 +5,36 @@ using TMPro;
 
 public class ShopManagerScript : MonoBehaviour
 {
-    public int playerShipIndex; // Setting the first ship available
-    public int currentShipIndex;
-    public GameObject[] shipModels;
-    public shipblueprint[] ships;
+    public int playerShipIndex;
+    public int currentShipIndex = 0;
 
+    [SerializeField] private GameObject pfShip;
 
-    private int[] shipUnlocked;
     public TMP_Text startText, coinText, yourCoin;
+    public Shipinform shipinform;
 
-    void Awake()
-    {
-        for (int i = 0; i < 9; i++)
-        {
-            //storing the ships models 
-            shipModels[i] = GameObject.Find("ShipHolder/StarSparrow" + (i + 1).ToString());
-            //Adding the ships to the 
-            ships[i].name = "StarSparrow" + (i + 1).ToString();
-            ships[i].index = i;
-
-            ships[i].price = i * 30;
-            if (i == 0) { ships[i].isUnlocked = true; }
-            else
-            {
-                ships[i].isUnlocked = false;
-            }
-
-
-        }
-        //Checking which one the player has unclock , if player not unclock any then default first ship will be unclocked 
-        playerShipIndex = PlayerPrefs.GetInt("SelectedShip", 0);
-        //all ship model set to false visible
-        foreach (GameObject ship in shipModels)
-        {
-            ship.SetActive(false);
-        }
-        //unlock the ship at currentshipindex
-        shipModels[playerShipIndex].SetActive(true);
-
-    }
     void Start()
     {  //getting the player coin
+        Ship(currentShipIndex);
         yourCoin.text = "Your Coin : " + PlayerPrefs.GetInt("Coin", 0).ToString();
 
-        foreach (shipblueprint ship in ships)
+    }
+    private void Ship(int index)
+    {
+        Destroy(pfShip);
+        pfShip = Instantiate(shipinform.ShipPerfab(index), transform.position, Quaternion.Euler(0f, -90f, 0f));
+        pfShip.transform.localScale = Vector3.one * 0.3f;
+        pfShip.SetActive(true);
+        pfShip.AddComponent<Rotateship>();
+        coinText.text = shipinform.ShipCost(index).ToString();
+        if (shipinform.ShipPurchased(index))
         {
-            if (ship.price == 0)
-            {
-                ship.isUnlocked = true;
-            }
-            else if (PlayerPrefs.GetInt(ship.name, 0) == 1)
-            {
-                ship.isUnlocked = true;
-            }
-            else
-            {
-                ship.isUnlocked = false;
-            }
+            startText.text = "Start";
         }
-
+        else
+        {
+            startText.text = "Buy";
+        }
     }
     void Update()
     {
@@ -71,33 +42,23 @@ public class ShopManagerScript : MonoBehaviour
     }
     public void ChangeNext()
     {
-        shipModels[currentShipIndex].SetActive(false);
-
         currentShipIndex++;
-
-        if (currentShipIndex == shipModels.Length)
+        if (currentShipIndex >= 10)
         {
             currentShipIndex = 0;
+
         }
-
-        shipModels[currentShipIndex].SetActive(true);
-
+        Ship(currentShipIndex);
 
     }
     public void ChangePervious()
     {
-        shipModels[currentShipIndex].SetActive(false);
+        currentShipIndex--;
         if (currentShipIndex <= 0)
         {
-            currentShipIndex = shipModels.Length - 1;
+            currentShipIndex = 9;
         }
-        else
-        {
-            currentShipIndex--;
-        }
-
-        shipModels[currentShipIndex].SetActive(true);
-
+        Ship(currentShipIndex);
     }
     public void StartingGame()
     {
@@ -114,36 +75,25 @@ public class ShopManagerScript : MonoBehaviour
     }
     public void UIUpdate()
     {
-        shipblueprint s = ships[currentShipIndex];
-        if (s.isUnlocked)
-        {
-            startText.text = "Start";
-        }
-        else
-        {
-            startText.text = "Buy";
 
-        }
-        coinText.text = s.price.ToString();
+
 
     }
     private void WhenTheShipBuy()
     {
+
         int coin = PlayerPrefs.GetInt("Coin", 0);
-        if (coin >= ships[currentShipIndex].price)
-        {   // reducing the coin amount     
-            coin = coin - ships[currentShipIndex].price;
-            // saving the coin update amount
-            PlayerPrefs.SetInt("Coin", 400);
-            // storing the unlocked ships
-            //PlayerPrefs.SetInt(ships[currentShipIndex].name,1);
-            //unlocked ships 
-            ships[currentShipIndex].isUnlocked = true;
-            ships[currentShipIndex].price = 0;
-            shipUnlocked[shipUnlocked.Length] = currentShipIndex;
+        coin -= shipinform.ShipCost(currentShipIndex);
+        if (coin >= 0)
+        {
+            shipinform.SetShipPurchased(currentShipIndex);
 
-            // storing the information into the scriptiable object
-
+            PlayerPrefs.SetInt("Coin", coin);
+            yourCoin.text = "Your Coin : " + coin.ToString();
+        }
+        else
+        {
+            
         }
     }
 

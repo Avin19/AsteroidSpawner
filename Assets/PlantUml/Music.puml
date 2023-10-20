@@ -1,0 +1,11 @@
+@startuml
+class Music {
+    - audioTheme : AudioSource
+    - clickAudio : AudioClip
+    - Awake() : void
+    + PlayMusic() : void
+    + StopMusic() : void
+    + ClickMusic() : void
+}
+MonoBehaviour <|-- Music
+@enduml
