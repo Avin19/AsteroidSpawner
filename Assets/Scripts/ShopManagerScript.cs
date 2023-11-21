@@ -11,7 +11,7 @@ public class ShopManagerScript : MonoBehaviour
     [SerializeField] private GameObject pfShip;
 
     public TMP_Text startText, coinText, yourCoin;
-    public Shipinform shipinform;
+    public ShipinformExtractor shipinform;
 
     void Start()
     {  //getting the player coin
@@ -21,7 +21,7 @@ public class ShopManagerScript : MonoBehaviour
     }
     private void Ship(int index)
     {
-        Destroy(pfShip);
+        
         pfShip = Instantiate(shipinform.ShipPerfab(index), transform.position, Quaternion.Euler(0f, -90f, 0f));
         pfShip.transform.localScale = Vector3.one * 0.3f;
         pfShip.SetActive(true);
