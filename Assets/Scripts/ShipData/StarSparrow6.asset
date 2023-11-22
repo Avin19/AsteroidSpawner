@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: StarSparrow6
   m_EditorClassIdentifier: 
   shipName: StarSparrow6
-  pfship: {fileID: 1734771206656390, guid: 33942a27e06a55e498652847d7d15f99, type: 3}
+  pfship: {fileID: 1824972043381806, guid: 38b63c01674358b448b15ee3a56538f5, type: 3}
   shipPurchaseCost: 150
   shipHealth: 120
   isPurchased: 0

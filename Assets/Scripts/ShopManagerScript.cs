@@ -14,7 +14,7 @@ public class ShopManagerScript : MonoBehaviour
     public ShipinformExtractor shipinform;
 
     void Start()
-    {  //getting the player coin
+    {  
         Ship(currentShipIndex);
         yourCoin.text = "Your Coin : " + PlayerPrefs.GetInt("Coin", 0).ToString();
 
@@ -22,8 +22,8 @@ public class ShopManagerScript : MonoBehaviour
     private void Ship(int index)
     {
         
-        pfShip = Instantiate(shipinform.ShipPerfab(index), transform.position, Quaternion.Euler(0f, -90f, 0f));
-        pfShip.transform.localScale = Vector3.one * 0.3f;
+        pfShip = Instantiate(shipinform.ShipPerfab(index), transform.position, Quaternion.Euler(-90f, 0f, 0f));
+        pfShip.transform.localScale = Vector3.one * 0.6f;
         pfShip.SetActive(true);
         pfShip.AddComponent<Rotateship>();
         coinText.text = shipinform.ShipCost(index).ToString();
@@ -36,14 +36,12 @@ public class ShopManagerScript : MonoBehaviour
             startText.text = "Buy";
         }
     }
-    void Update()
-    {
-        UIUpdate();
-    }
+    
     public void ChangeNext()
     {
         currentShipIndex++;
-        if (currentShipIndex >= 10)
+        Destroy(pfShip);
+        if (currentShipIndex >= 9)
         {
             currentShipIndex = 0;
 
@@ -54,9 +52,10 @@ public class ShopManagerScript : MonoBehaviour
     public void ChangePervious()
     {
         currentShipIndex--;
+        Destroy(pfShip);
         if (currentShipIndex <= 0)
         {
-            currentShipIndex = 9;
+            currentShipIndex = 8;
         }
         Ship(currentShipIndex);
     }
@@ -73,12 +72,7 @@ public class ShopManagerScript : MonoBehaviour
             WhenTheShipBuy();
         }
     }
-    public void UIUpdate()
-    {
-
-
-
-    }
+   
     private void WhenTheShipBuy()
     {
 
