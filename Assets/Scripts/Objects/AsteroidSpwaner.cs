@@ -10,7 +10,7 @@ public class AsteroidSpwaner : MonoBehaviour
     //Intervial between two asteriods generation
     [SerializeField] private float secondBetweenAsteroids;
     [SerializeField]private Vector2 forceRange;
-    [SerializeField]private Transform ship;
+  
   
 
     private float timer;

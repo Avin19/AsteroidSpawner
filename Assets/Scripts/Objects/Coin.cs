@@ -1,16 +1,24 @@
 using UnityEngine;
 
-public class Coin : Asteroid
+public class Coin : Spawner
 {   
   
+   
    private void OnCollisionEnter(Collision other) {
     if(other.gameObject.tag == "Player")
     {
         
        GameObject.Find("ScoreSystem").GetComponent<ScoreSystem>().coinadd();
-        Destroy(gameObject);
         AudioManager.Instance.CoinCollected();
+        Destroy(gameObject);
+       
     }
+   }
+   private void Start() {
+      ObjectSpawner();
+   }
+   private void Update() {
+      
    }
    
 }

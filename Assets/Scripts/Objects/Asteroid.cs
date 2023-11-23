@@ -1,20 +1,13 @@
 using UnityEngine;
 
 
-public class Asteroid : MonoBehaviour
+public class Asteroid : Spawner
 {   
   
     [SerializeField] private GameObject pfParticleSystem;
     
-    //When the asteroid is out of screen then OnBecameInvisibler Function is called .
-    private void Update() {
-        
-
-        if(Mathf.Abs(transform.position.x) >=9f || Mathf.Abs(transform.position.y) >= 7f)
-    
-        {
-             Destroy(gameObject);
-        }
+    private void Start() {
+        ObjectSpawner();
     }
     //When the Asteriod hits Player 
     private void OnCollisionEnter(Collision other) {
