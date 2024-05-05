@@ -8,7 +8,6 @@ public class Spawner : MonoBehaviour
 
     private void Start() {
         mainCamera = Camera.main;
-
     }
     protected void ObjectSpawner()
     {   

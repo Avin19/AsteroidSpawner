@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Coin : Spawner
+public class Coin : AsteroidSpwaner
 {   
   
    
@@ -14,11 +14,7 @@ public class Coin : Spawner
        
     }
    }
-   private void Start() {
-      ObjectSpawner();
-   }
-   private void Update() {
-      
-   }
+   
+  
    
 }

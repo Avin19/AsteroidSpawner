@@ -329,6 +329,7 @@ GameObject:
   - component: {fileID: 4079455855784818}
   - component: {fileID: 33192646495059852}
   - component: {fileID: 23764091638737426}
+  - component: {fileID: 7219969633212690900}
   m_Layer: 0
   m_Name: StarSparrow_Wing_3
   m_TagString: Untagged
@@ -402,6 +403,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7219969633212690900
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157428717470896}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300014, guid: 71e6e8f0e9dd9164da8d88a237ed787b, type: 3}
 --- !u!1 &1159254416435938
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,6 +436,7 @@ GameObject:
   - component: {fileID: 4797738682304902}
   - component: {fileID: 33623076603751132}
   - component: {fileID: 23499079744902608}
+  - component: {fileID: 6443790022706521887}
   m_Layer: 0
   m_Name: StarSparrow_Weapon
   m_TagString: Untagged
@@ -486,6 +510,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6443790022706521887
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159254416435938}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300008, guid: 71e6e8f0e9dd9164da8d88a237ed787b, type: 3}
 --- !u!1 &1159631172220496
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,6 +596,7 @@ GameObject:
   - component: {fileID: 4236280940527184}
   - component: {fileID: 33605104791577730}
   - component: {fileID: 23013284986789074}
+  - component: {fileID: 2564395573237533634}
   m_Layer: 0
   m_Name: StarSparrow_Wing_3 (2)
   m_TagString: Untagged
@@ -623,6 +670,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2564395573237533634
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166398843178874}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300014, guid: 71e6e8f0e9dd9164da8d88a237ed787b, type: 3}
 --- !u!1 &1168331191037852
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,6 +703,7 @@ GameObject:
   - component: {fileID: 4836252372583572}
   - component: {fileID: 33358845979049836}
   - component: {fileID: 23215907929024542}
+  - component: {fileID: 6246687579044793758}
   m_Layer: 0
   m_Name: StarSparrow_Wing_1 (1)
   m_TagString: Untagged
@@ -708,6 +778,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6246687579044793758
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168331191037852}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300010, guid: 71e6e8f0e9dd9164da8d88a237ed787b, type: 3}
 --- !u!1 &1186789744946174
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,6 +917,7 @@ GameObject:
   - component: {fileID: 4230184579253788}
   - component: {fileID: 33917757012088730}
   - component: {fileID: 23029332879517798}
+  - component: {fileID: 6157438702654131309}
   m_Layer: 0
   m_Name: StarSparrow_Engine
   m_TagString: Untagged
@@ -898,6 +991,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6157438702654131309
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203974430307398}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300004, guid: 71e6e8f0e9dd9164da8d88a237ed787b, type: 3}
 --- !u!1 &1206124179743768
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,6 +1024,7 @@ GameObject:
   - component: {fileID: 4864422410452132}
   - component: {fileID: 33439810023744974}
   - component: {fileID: 23343391960629318}
+  - component: {fileID: 2403594237998765142}
   m_Layer: 0
   m_Name: StarSparrow_Wing_2
   m_TagString: Untagged
@@ -982,6 +1098,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2403594237998765142
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206124179743768}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300012, guid: 71e6e8f0e9dd9164da8d88a237ed787b, type: 3}
 --- !u!1 &1225040721065050
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,6 +1131,7 @@ GameObject:
   - component: {fileID: 4209194269920882}
   - component: {fileID: 33258812122626032}
   - component: {fileID: 23123281464560602}
+  - component: {fileID: 5972275742753319322}
   m_Layer: 0
   m_Name: StarSparrow_Thruster
   m_TagString: Untagged
@@ -1066,6 +1205,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5972275742753319322
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225040721065050}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300006, guid: 71e6e8f0e9dd9164da8d88a237ed787b, type: 3}
 --- !u!1 &1274683958840126
 GameObject:
   m_ObjectHideFlags: 0
@@ -1130,6 +1291,7 @@ GameObject:
   - component: {fileID: 4010061380973382}
   - component: {fileID: 33388729392342464}
   - component: {fileID: 23478286820390686}
+  - component: {fileID: 5492512412666436807}
   m_Layer: 0
   m_Name: StarSparrow_Plasma
   m_TagString: Untagged
@@ -1203,6 +1365,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5492512412666436807
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313136086046388}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 71e6e8f0e9dd9164da8d88a237ed787b, type: 3}
 --- !u!1 &1322387725002842
 GameObject:
   m_ObjectHideFlags: 0
@@ -1214,6 +1398,7 @@ GameObject:
   - component: {fileID: 4229854398504750}
   - component: {fileID: 33377370207789230}
   - component: {fileID: 23162927450787272}
+  - component: {fileID: 5093679508630416425}
   m_Layer: 0
   m_Name: StarSparrow_Weapon
   m_TagString: Untagged
@@ -1287,6 +1472,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5093679508630416425
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322387725002842}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300008, guid: 71e6e8f0e9dd9164da8d88a237ed787b, type: 3}
 --- !u!1 &1361942873643010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,6 +1505,7 @@ GameObject:
   - component: {fileID: 4065857120985210}
   - component: {fileID: 33614991107615530}
   - component: {fileID: 23195679726807722}
+  - component: {fileID: 210127373597420779}
   m_Layer: 0
   m_Name: StarSparrow_Weapon (3)
   m_TagString: Untagged
@@ -1371,6 +1579,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &210127373597420779
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361942873643010}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300008, guid: 71e6e8f0e9dd9164da8d88a237ed787b, type: 3}
 --- !u!1 &1364121787733792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,6 +1665,7 @@ GameObject:
   - component: {fileID: 4107515750212756}
   - component: {fileID: 33143309700291176}
   - component: {fileID: 23590062219599192}
+  - component: {fileID: 8688673303664888228}
   m_Layer: 0
   m_Name: StarSparrow_Weapon (1)
   m_TagString: Untagged
@@ -1508,6 +1739,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8688673303664888228
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372305602417624}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300008, guid: 71e6e8f0e9dd9164da8d88a237ed787b, type: 3}
 --- !u!1 &1413830528295184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,6 +1878,7 @@ GameObject:
   - component: {fileID: 4354405502215102}
   - component: {fileID: 33766571373286260}
   - component: {fileID: 23385711362266800}
+  - component: {fileID: 2110428785265804409}
   m_Layer: 0
   m_Name: StarSparrow_Wing_3 (1)
   m_TagString: Untagged
@@ -1698,6 +1952,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2110428785265804409
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444399285138672}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300014, guid: 71e6e8f0e9dd9164da8d88a237ed787b, type: 3}
 --- !u!1 &1455687427011168
 GameObject:
   m_ObjectHideFlags: 0
@@ -1815,6 +2091,7 @@ GameObject:
   - component: {fileID: 4619219676108932}
   - component: {fileID: 33785260062560070}
   - component: {fileID: 23730401302250810}
+  - component: {fileID: 7811108532554879430}
   m_Layer: 0
   m_Name: StarSparrow_Wing_2 (2)
   m_TagString: Untagged
@@ -1888,6 +2165,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7811108532554879430
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488783190951516}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300012, guid: 71e6e8f0e9dd9164da8d88a237ed787b, type: 3}
 --- !u!1 &1491123105858176
 GameObject:
   m_ObjectHideFlags: 0
@@ -2058,6 +2357,7 @@ GameObject:
   - component: {fileID: 4283643277991750}
   - component: {fileID: 33681221011200444}
   - component: {fileID: 23563634360699596}
+  - component: {fileID: 814743391456692209}
   m_Layer: 0
   m_Name: StarSparrow_Weapon
   m_TagString: Untagged
@@ -2131,6 +2431,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &814743391456692209
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523700620491930}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300008, guid: 71e6e8f0e9dd9164da8d88a237ed787b, type: 3}
 --- !u!1 &1528182251807614
 GameObject:
   m_ObjectHideFlags: 0
@@ -2195,6 +2517,7 @@ GameObject:
   - component: {fileID: 4927187350271938}
   - component: {fileID: 33705848514286346}
   - component: {fileID: 23233143052450474}
+  - component: {fileID: 6490024541510287246}
   m_Layer: 0
   m_Name: StarSparrow_Thruster
   m_TagString: Untagged
@@ -2268,6 +2591,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6490024541510287246
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538140197504128}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300006, guid: 71e6e8f0e9dd9164da8d88a237ed787b, type: 3}
 --- !u!1 &1538195617378894
 GameObject:
   m_ObjectHideFlags: 0
@@ -2279,6 +2624,7 @@ GameObject:
   - component: {fileID: 4849626502322540}
   - component: {fileID: 33332160802410548}
   - component: {fileID: 23770648655483128}
+  - component: {fileID: 1165215490021770516}
   m_Layer: 0
   m_Name: StarSparrow_Thruster
   m_TagString: Untagged
@@ -2352,6 +2698,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1165215490021770516
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538195617378894}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300006, guid: 71e6e8f0e9dd9164da8d88a237ed787b, type: 3}
 --- !u!1 &1543027508227846
 GameObject:
   m_ObjectHideFlags: 0
@@ -2363,6 +2731,7 @@ GameObject:
   - component: {fileID: 4766394603303346}
   - component: {fileID: 33817014543589960}
   - component: {fileID: 23207001536214248}
+  - component: {fileID: 936975580586395891}
   m_Layer: 0
   m_Name: StarSparrow_Engine
   m_TagString: Untagged
@@ -2436,6 +2805,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &936975580586395891
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543027508227846}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300004, guid: 71e6e8f0e9dd9164da8d88a237ed787b, type: 3}
 --- !u!1 &1550411464007562
 GameObject:
   m_ObjectHideFlags: 0
@@ -2447,6 +2838,7 @@ GameObject:
   - component: {fileID: 4281791096190624}
   - component: {fileID: 33418969335893018}
   - component: {fileID: 23038314380129572}
+  - component: {fileID: 1852126339899198978}
   m_Layer: 0
   m_Name: StarSparrow_Weapon (2)
   m_TagString: Untagged
@@ -2520,6 +2912,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1852126339899198978
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550411464007562}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300008, guid: 71e6e8f0e9dd9164da8d88a237ed787b, type: 3}
 --- !u!1 &1552900632971786
 GameObject:
   m_ObjectHideFlags: 0
@@ -2637,6 +3051,7 @@ GameObject:
   - component: {fileID: 4535729083304134}
   - component: {fileID: 33621204237711910}
   - component: {fileID: 23687339618964434}
+  - component: {fileID: 3363061036093767418}
   m_Layer: 0
   m_Name: StarSparrow_Wing_3
   m_TagString: Untagged
@@ -2710,6 +3125,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3363061036093767418
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564049193166998}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300014, guid: 71e6e8f0e9dd9164da8d88a237ed787b, type: 3}
 --- !u!1 &1579510098491538
 GameObject:
   m_ObjectHideFlags: 0
@@ -2721,6 +3158,7 @@ GameObject:
   - component: {fileID: 4568826015019942}
   - component: {fileID: 33405478799736702}
   - component: {fileID: 23366956284668598}
+  - component: {fileID: 2917607628712817616}
   m_Layer: 0
   m_Name: StarSparrow_Plasma
   m_TagString: Untagged
@@ -2794,6 +3232,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2917607628712817616
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579510098491538}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 71e6e8f0e9dd9164da8d88a237ed787b, type: 3}
 --- !u!1 &1663023825675144
 GameObject:
   m_ObjectHideFlags: 0
@@ -2805,6 +3265,7 @@ GameObject:
   - component: {fileID: 4736103177852624}
   - component: {fileID: 33039547708949486}
   - component: {fileID: 23394231538036352}
+  - component: {fileID: 5511370723926903269}
   m_Layer: 0
   m_Name: StarSparrow_Core
   m_TagString: Untagged
@@ -2880,6 +3341,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5511370723926903269
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663023825675144}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: 71e6e8f0e9dd9164da8d88a237ed787b, type: 3}
 --- !u!1 &1709580810370122
 GameObject:
   m_ObjectHideFlags: 0
@@ -3103,6 +3586,7 @@ GameObject:
   - component: {fileID: 4531854773645170}
   - component: {fileID: 33322446526695610}
   - component: {fileID: 23885500720307588}
+  - component: {fileID: 6482866160967991255}
   m_Layer: 0
   m_Name: StarSparrow_Weapon
   m_TagString: Untagged
@@ -3176,6 +3660,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6482866160967991255
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791453203110518}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300008, guid: 71e6e8f0e9dd9164da8d88a237ed787b, type: 3}
 --- !u!1 &1812221225311418
 GameObject:
   m_ObjectHideFlags: 0
@@ -3456,6 +3962,7 @@ GameObject:
   - component: {fileID: 4975627826924892}
   - component: {fileID: 33928454968192888}
   - component: {fileID: 23099359145522258}
+  - component: {fileID: 4753111803734783347}
   m_Layer: 0
   m_Name: StarSparrow_Wing_1
   m_TagString: Untagged
@@ -3530,6 +4037,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4753111803734783347
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913190687573570}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300010, guid: 71e6e8f0e9dd9164da8d88a237ed787b, type: 3}
 --- !u!1 &1943241294290834
 GameObject:
   m_ObjectHideFlags: 0
@@ -3541,6 +4070,7 @@ GameObject:
   - component: {fileID: 4383299499618846}
   - component: {fileID: 33055827640512228}
   - component: {fileID: 23789124164201178}
+  - component: {fileID: 8212088431301739307}
   m_Layer: 0
   m_Name: StarSparrow_Wing_2
   m_TagString: Untagged
@@ -3614,6 +4144,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8212088431301739307
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943241294290834}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300012, guid: 71e6e8f0e9dd9164da8d88a237ed787b, type: 3}
 --- !u!1 &1965162502627288
 GameObject:
   m_ObjectHideFlags: 0
@@ -3678,6 +4230,7 @@ GameObject:
   - component: {fileID: 4246286219260116}
   - component: {fileID: 33327520310711740}
   - component: {fileID: 23091928819748834}
+  - component: {fileID: 3931430393427149176}
   m_Layer: 0
   m_Name: StarSparrow_Wing_2 (1)
   m_TagString: Untagged
@@ -3751,6 +4304,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3931430393427149176
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993796144456152}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300012, guid: 71e6e8f0e9dd9164da8d88a237ed787b, type: 3}
 --- !u!1 &1999582914885274
 GameObject:
   m_ObjectHideFlags: 0
@@ -3762,6 +4337,7 @@ GameObject:
   - component: {fileID: 4213608393554618}
   - component: {fileID: 33322574255540474}
   - component: {fileID: 23345879505398828}
+  - component: {fileID: 525918519085796363}
   m_Layer: 0
   m_Name: StarSparrow_Weapon (4)
   m_TagString: Untagged
@@ -3835,3 +4411,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &525918519085796363
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999582914885274}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300008, guid: 71e6e8f0e9dd9164da8d88a237ed787b, type: 3}

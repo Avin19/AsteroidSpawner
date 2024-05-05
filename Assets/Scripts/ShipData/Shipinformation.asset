@@ -22,3 +22,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f53c34b2fd7517249b2ae424768e90dc, type: 2}
   - {fileID: 11400000, guid: 0c58f4ac961251a438689edb443e9c94, type: 2}
   - {fileID: 11400000, guid: 66521fbfe9966d743942681870d278e7, type: 2}
+  shipList:
+  - {fileID: 11400000, guid: ace5d6992c47fc64793ac88af12e6951, type: 2}
+  - {fileID: 11400000, guid: ca8b8f66b0865ed4b864a417840912ee, type: 2}
+  - {fileID: 11400000, guid: 9ce28c456a4c7c14eaf3aeaf5f0562a4, type: 2}
+  - {fileID: 11400000, guid: 4cdec94e68955cd438536886069b3eb3, type: 2}
+  - {fileID: 11400000, guid: a58e4348e8bae724096cd4c25712a610, type: 2}
+  - {fileID: 11400000, guid: b71791056ceed164aa9b9907cd0af500, type: 2}
+  - {fileID: 11400000, guid: f53c34b2fd7517249b2ae424768e90dc, type: 2}
+  - {fileID: 11400000, guid: 0c58f4ac961251a438689edb443e9c94, type: 2}
+  - {fileID: 11400000, guid: 66521fbfe9966d743942681870d278e7, type: 2}

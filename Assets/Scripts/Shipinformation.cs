@@ -10,7 +10,6 @@ public class Shipinformation : ScriptableObject
     public GameObject pfship;
     public int shipPurchaseCost;
     public int shipHealth;
-
     public bool isPurchased = false;
 
 
