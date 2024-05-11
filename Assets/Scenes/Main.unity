@@ -206,7 +206,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1316094904}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ShopManagerScript, Assembly-CSharp
         m_MethodName: ChangeNext
         m_Mode: 1
@@ -393,7 +393,7 @@ GameObject:
   - component: {fileID: 405872932}
   - component: {fileID: 405872931}
   m_Layer: 5
-  m_Name: Coin
+  m_Name: Cost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1220,7 +1220,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1316094904}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ShopManagerScript, Assembly-CSharp
         m_MethodName: StartingGame
         m_Mode: 1
@@ -1965,8 +1965,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1316094902}
+  - component: {fileID: 1316094903}
   - component: {fileID: 1316094904}
-  - component: {fileID: 1316094905}
   m_Layer: 0
   m_Name: ShipHolder
   m_TagString: Untagged
@@ -1982,13 +1982,32 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316094901}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1316094903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316094901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbc29eae766b0da4e999a641b4a0e2f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextBtn: {fileID: 160835794}
+  backBtn: {fileID: 2095315778}
+  startBtn: {fileID: 905269520}
+  coinText: {fileID: 446902481}
+  costText: {fileID: 405872931}
+  startText: {fileID: 1120907695}
+  shipList: {fileID: 11400000, guid: aabeb440f45f64348a9d4be2daf86c6d, type: 2}
 --- !u!114 &1316094904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1998,30 +2017,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1316094901}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19a176932186faf4ab264f910de63261, type: 3}
+  m_Script: {fileID: 11500000, guid: b14d7f6c6074cc942b5d624e1a6097a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerShipIndex: 0
-  currentShipIndex: 0
-  pfShip: {fileID: 0}
-  startText: {fileID: 1120907695}
-  coinText: {fileID: 405872931}
-  yourCoin: {fileID: 446902481}
-  shipinform: {fileID: 11400000, guid: 97189fcb2b9cd3c4b8ba40a7201d62cf, type: 2}
---- !u!114 &1316094905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316094901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1f51401088186a439203831d92746a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shipinform: {fileID: 11400000, guid: 97189fcb2b9cd3c4b8ba40a7201d62cf, type: 2}
-  playerCoin: {fileID: 0}
+  zangle: 50
 --- !u!1 &1873173114
 GameObject:
   m_ObjectHideFlags: 0
@@ -2347,7 +2346,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1316094904}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ShopManagerScript, Assembly-CSharp
         m_MethodName: ChangePervious
         m_Mode: 1

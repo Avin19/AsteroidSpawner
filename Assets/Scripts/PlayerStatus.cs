@@ -6,6 +6,6 @@ using UnityEngine;
 public class PlayerStatus : ScriptableObject
 {
     public int coin;
-    public GameObject pfShip;
+    public GameObject pfGame;
 
 }
