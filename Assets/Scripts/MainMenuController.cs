@@ -1,7 +1,7 @@
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -25,7 +25,7 @@ public class MainMenuController : MonoBehaviour
 
     private void OnStartButton()
     {
-        throw new NotImplementedException();
+        SceneManager.LoadScene(1);
     }
 
     private void OnBackButton()
@@ -58,7 +58,9 @@ public class MainMenuController : MonoBehaviour
 
     private void UpdateShip(int count)
     {
-        pfShip = shipList.Ships[count].pfship;
+        Destroy(pfShip);
+        pfShip = Instantiate(shipList.Ships[count].pfship, transform);
+
 
     }
 }
